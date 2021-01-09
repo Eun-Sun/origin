@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tit"><a href="#">돔객체</a></h1>
+    <script>
+        //document 객체
+        //javascript가 document를 읽는 순간까지의
+        //html문서 내의 요소,속성, css 등 html에 관련된 사항들을 모두 속성으로 저장한다.
+        //script tag 위에 존재하는 document들을 다 포함시킴.
+
+        //객체- 의미있는 것들의 만들기 위한 속성
+
+        //html요소를 document객체는 자신의 속성으로 어딘가에 저장을 하고 그 요소를 가져올 수 있는 메소드를 제공한다.
+        //document.getElementById('html요소아이디');         //띄어쓰기x, #,.쓰지 x  => id에 해당하는 요소 return
+        //document.getElementsByClassName('html요소아이디');                        => class에 해당하는 요소 return
+        //document.getElementsByTagname('html요소아이디');                          => tag에 해당하는 요소 return
+        //document.querySelector('#Id||.class||tag'); //#,.적어야 인식됨.           
+        var h_1 = document.getElementById('tit');
+
+        //이벤트 타입, click, dblclick, mouseleave, mouseenter, mouseover,,,auxclick(우클릭),wheel(스크롤),mousedown(active와 비슷),mouseup
+        h_1.addEventListener('click', function(){ //원할때 이벤트를 실행시키는 함수
+            this.style.fontSize = '12px';
+            this.style.border = '1px solid red';
+            this.firstChild.style.color='red'
+        });
+        
+    </script>
+    <h2>돔객체</h2>
+    <p id=im><img src="../imgs/snow1.jpg" alt="첫눈"></p>
+    <!--p또는 img를 클릭했을 때 이미지 요소가 바뀌도록 javascript를 작성하시오.-->
+    <script>
+        // var p_1 = document.getElementById('im');
+        // var num =0;
+        /*
+        p_1.firstChild.addEventListener('click', function(){            
+            num++;
+            //토글 toggle
+            if(num%2==1){
+                this.src = '../imgs/snow2.jpg';
+                this.alt = '소나무 눈송이';
+            }else{
+                this.src = '../imgs/snow1.jpg';
+                this.alt = '첫눈';
+            }
+        });
+        */        
+        //var p_1 = document.querySelector('#im');
+        // p_1.firstChild.addEventListener('click', function(){
+        //     this.src = '../imgs/snow2.jpg';
+        // })
+
+
+        // boolean으로 만들어보는 방법.(많이쓰임 외우기!)
+        //var bool =true;
+        // p_1.firstChild.addEventListener('click', function(){
+        //     if(bool){
+        //        this.src = '../imgs/snow2.jpg';
+        //        this.alt = '소나무 눈송이';
+        //        bool = false;
+        //     }else{
+        //        this.src = '../imgs/snow1.jpg';
+        //        this.alt = '첫눈';
+        //        bool = false;
+        //     }
+        // });
+
+        var p_1 = document.querySelector('#im');
+        p_1.firstChild.addEventListener('mouseenter', function(){
+            this.src = '../imgs/snow2.jpg';
+            this.alt = '소나무 눈송이';
+        });
+        p_1.firstChild.addEventListener('mouseleave', function(){
+            this.src = '../imgs/snow1.jpg';
+            this.alt = '첫눈';
+        });
+
+    </script>
+</body>
+</html>

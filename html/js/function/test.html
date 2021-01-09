@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수
+        //function 식별자(){} 식별자는 --> 영소, _ , $로 시작
+        //0. 함수는 원할 때 실행하기 위해서. (javascript는 원하지 않아도 자동으로 아래로 오른쪽으로)
+        //1. 함수는 호출을 할 때 실행
+        //   식별자();
+        // function foo(){ alert('함수 호출했다.');} --> 작성자가 함수를 작성하는 것을 함수 정의라고 한다.
+        // foo(); // 함수의 표현식을 실행
+        // foo; // foo function(함수) 그 자체 ->함수를 어떻게 하겠다는게 x
+
+        // var foo2=foo; //함수자체를 변수에 할당
+        // foo2();
+
+        //2. 함수는 reset된다. -->함수를 호출하면, 실행한 이후  함수 실행이 모두 종료되면, 함수는 다시 초기화된다.
+        // function foo3(){
+        //     var ss=0;
+        //     ss++;
+        //     console.log(ss);
+        // }
+
+        // foo3();
+        // foo3();
+        // foo3();
+
+        //3. 함수는 함수내부에 선언된 변수를 지역변수,
+        //   함수 외부에 선언된 변수를 전역변수.
+        // var global = 100; //전역변수 - 어디에서도 부를 수 있다.
+        // foo4(); 정의되기전에 불러도 실행됨(hoisting으로 식별자 끌고올라오는데, 함수는 내용이 어딘가 숨어있음)
+        // function foo4(){
+        //     var local = 1; //지역변수 - 선언된 함수 내부에서만 사용가능하다.
+        //     global = global - 50;
+        // }
+        // foo4();
+        //console.log(local); //error
+        // console.log(global); //0
+
+        //4. 함수는 함수를 호출한 context에서 실행한다.
+
+        // function foo5(){
+        //     var s = 0;
+        //     foo6(); //foo6는 실행하지만 그뿐이다.
+        //     s++;
+        // }
+
+        // function foo6(){
+        //     var s = 100;
+        // }
+
+        //5. 함수는 (함수외부의 값을 내부로 전달 할 수 있다.)
+        //   함수 와부의 값을 내부로 전달하는 방식 --> 파라미터
+
+        // var value = 1000; // ex> 온라인 마켓의 개인 자산
+        // foo7();
+
+        // function foo7(){ //포인트 계산 함수
+                            //foo7은 value의 값을 100씩 증가시키는 역할
+        //     var point = 0; 
+        //     point = value+100;
+        //     foo8(point); //value는 전달인자 - 전역변수 값을 가공해서
+        //                  //foo8에게 전달해준다
+        // }
+
+        // function foo8(x){//ex>포인트 가지고 진행하는 이벤트 함수
+                            //x는 파라미터 즉 x=point;
+                            //x는 외부의 값을 전달 받아서 가공 후 이벤트와 합쳐진다. 전달인자에 의해서 함수의 고정포맷이 다른 값들로 변환될 수 있다. 현재 x=point;
+        //     x /= 10;     //전달된 인자를 가지고 무엇인가를 했다.
+                            //x를 10으로 나누어서 저장하기는 의미없음.
+        //     alert(x+'를 이벤트로 전환');
+            
+        // }
+        // foo9(10000); // 그럼 y는 
+
+        // function foo9(y){ //전달인자를 가곡해서 foo8을 호출한다.
+        //                   //외부의 전달인자를 가공해서 foo8에 전달 호출한다.
+        //     y -=100;
+        //     foo8(y);
+        // }
+
+        //6. 함수는 return키워드를 가질 수 있다.
+        //   함수 내에서 return키워드를 사용한다면,
+        //   함수내에서 호출한 곳에 return 다음의 값을 남겨두고 함수는 그 순간 바로 종료된다.
+        //   함수는 return키워드를 만나는 순간 종료된다.
+        // var re = prompt('값을 입력하시오')*1; // square은 사라지고 result값만 남음.
+
+        // var temp=square(re);       
+        
+        // function square(x){
+        //     var result = x*x;            
+        //     return result;        
+        // }
+        // console.log(temp); 
+        var re = square1(128);
+        var co = square1(prompt('값을 입력하세요.'));
+        alert(co);
+        function square1(x){
+            var result = x*x;
+            if(result > 0){
+                console.log('결과값은'+result);
+                return result;
+            }else{
+                alert('숫자를 넣으셔야죠');
+                        //confirm함수는 return을 boolean을 한다.
+                var bool = confirm('다시 진행하시겠습니까?');
+                if(bool){                    
+                    return square1(prompt('값을 입력하시오')*1); // 재귀함수 - 본인이 본인을 부르는 함수.
+                    
+                }else{
+                    alert('완전 종료');
+                    return "The End";
+                }
+            }
+
+        }
+        /* 선생님 풀이
+        var re = square1(8);
+        var co = square1(prompt('값을 입력하세요.'));
+        alert(co);
+        function square1(x){
+            var result = x*x;
+            if(result > 0){
+                console.log("결과값은"+result);
+                return result;
+            }else{
+                alert('숫자를 넣으셔야죠');
+                        //confirm함수는 return을 boolean을 한다.
+                var bool = confirm('다시 진행하시겠습니까?');
+                if(bool){
+                    square1(prompt('값을 입력하시오'));
+                    return;
+                }else{
+                    alert('완전 종료');
+                    return;
+                }
+            }
+        }
+        */
+    </script>
+</body>
+</html>

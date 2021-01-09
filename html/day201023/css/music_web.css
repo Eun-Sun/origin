@@ -1,0 +1,150 @@
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;    
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    background-color: #fff;
+    color: #222;
+    font-family: Lato, sans-serif;
+    font-size: 0.9em;
+}
+main{
+    display: flex;
+    flex: 1 0 auto;
+}
+main>aside.web{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -50px;
+    width: 40px;
+    min-height: 500px;
+    background: #f2f2f2;
+}
+main>aside.web>h1{
+    font-size: 0;
+    line-height: 0;
+}
+main>aside.web>i{
+
+}
+
+section{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section>div.music{
+    flex: 0 0 280px;
+    display: flex;  
+    box-sizing: border-box;
+    padding: 40px;  
+    background: rgb(147, 172, 204);
+    color: white;  
+}
+section>div.music>img{
+}
+section>div.music>div{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;    
+    padding-left: 50px;  
+}
+section>div.music>div>div{
+    margin-bottom: auto;
+}
+section>div.music>div>div>p:nth-child(1){
+    font-size: 1.8em;
+    margin: 0 0 15px;   
+}
+section>div.music>div>div>address.web{
+    font-size: 0.9em;
+}
+section>div.music>div>div>address.web>p{
+    
+    margin: 5px 0;
+}
+
+section>div.music>div>dl{    
+    margin-top: 0;
+    display: flex;
+}
+section>div.music>div>dl>dd:not(:first-of-type){
+    padding-left: 2em;
+}
+section>div.music>div>dl>dd>span{
+    display: block;
+}
+
+section>ul{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 10px 0 10px;
+}
+section>ul>li{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 20px;
+    width: 100%;
+    height: 50px;
+}
+section>ul>li.wh{}
+section>ul>li.gy{
+    background: #f2f2f2;
+}
+section>ul>li>p{
+    flex: 0 0 25%;
+}
+section>ul>li>p:last-of-type>span{
+    box-sizing: border-box;
+    padding: 5px 3px;
+    border: 1px solid #000000;
+    font-size: 0.7px;
+    
+
+}
+footer{
+    display: flex;
+    flex: 0 0 90px;
+    padding: 10px;
+    background: #5073a8;
+    color: #fff;
+}
+footer>div{
+    display: flex;
+    width: 100%;
+}
+footer>div>div{    
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+}
+footer>div>p.web>img{
+    width: 90px; height: 90px;
+    margin-right: 10px;
+}
+footer>div>div>p{
+    margin: 10px 0;
+}
+footer>div>dl{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+footer>div>dl>dd{
+    flex: 0 0 25%;
+}

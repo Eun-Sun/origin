@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header {
+            position: fixed;
+            width: 100%;
+            height: 80px;
+        }
+
+        header>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            width: 1000px;
+            height: 80px;
+        }
+
+        header>div>* {
+            flex: 0 0 auto;
+        }
+
+        header>div>h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 184px;
+            height: 43px;
+            background: lightblue;
+        }
+
+        header>div>nav {}
+
+        header>div>nav>ul {
+            display: flex;
+        }
+
+        header>div>nav>ul>li {
+            flex: 1 0 0;
+        }
+
+        header>div>nav>ul>li>a {
+            display: block;
+            text-align: center;
+            font-size: 15px;
+            letter-spacing: -1px;
+        }
+
+        header>div>nav>ul>li>div {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            min-height: 50px;
+            background: linear-gradient(180deg, #474f5b 50px, #fff 50px);
+        }
+
+        header>div>nav>ul>li>div>ul {
+            position: relative;
+            margin: 0 auto;
+            width: 1000px;
+            height: 50px;
+        }
+
+        header>div>nav>ul>li>div>ul:before{
+            position: absolute;
+            top: -14px;
+            content: "";
+            width: 0; height: 0;
+            border: 7px solid #fff;
+            border-bottom-color: #474f5b;
+        }
+        header>div>nav>ul>li:nth-child(1)>div>ul:before{left:255px;}
+
+        header>div>nav>ul>li:nth-child(2)>div>ul:before{left:370px;}
+
+        header>div>nav>ul>li:nth-child(3)>div>ul:before{left:478px;}
+
+        header>div>nav>ul>li:nth-child(4)>div>ul:before{left:585px;}
+        header>div>nav>ul>li>div>ul>li {}
+        
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>로고</h1>
+            <nav>
+                <h1 class="hidden">주요 카테고리</h1>
+                <ul>
+                    <li> <a href="#">목록11111111</a>
+                        <div>
+                            <ul>
+                                <li>1-1</li>
+                                <li>1-222</li>
+                                <li>1-333333</li>
+                                <li>1-4444</li>
+                                <li>1-5555555</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li> <a href="#">목록22222222222</a>
+                        <div>
+                            <ul>
+                                <li>2-1</li>
+                                <li>2-22222</li>
+                                <li>3-333333333</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li> <a href="#">목록3333333</a>
+                        <div>
+                            <ul>
+                                <li>3-1</li>
+                                <li>3-2222222</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li> <a href="#">목록4444</a>
+                        <div>
+                            <ul>
+                                <li>4-111111</li>
+                                <li>4-222222222222</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <p>로그인</p>
+            <dl>
+                <dt class="hidden">유틸메뉴</dt>
+                <dd>지점검색</dd>
+                <dd>고객센터</dd>
+                <dd>ENG</dd>
+                <div>
+                    <p>검색창</p>
+                    <form action=""></form>
+                    <input type="text">
+                    <input type="image" src="" alt="">
+                </div>
+            </dl>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <style>
+
+            /* 3d
+            display:flex처럼
+            container에서 perspective를 지정하고
+            이후 내부의 요소들을 지정할 수 있다.
+            기본적으로
+            1. container가 필요하고
+            2. 실질적인 컨텐츠를 연결할 중간 요소가 필요하며
+            3. 마지막으로 실질적인 3d요소가 있어야한다.
+             */
+            .container {
+                perspective: 300px;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                margin: 0 auto;
+                width: 800px; height: 200px;
+            }
+            .container>div{
+                flex: 0 0 auto;
+                width: 100px; height: 100px;
+                background: lightseagreen;
+                font: bold 50px/100px arial, sans-serif;
+                text-align: center;
+            }
+            .container>div:first-child,.container>div:nth-child(2){
+                transform: rotate3d(0,1,0, 30deg);
+            }
+            .container>div:nth-child(3){
+                animation: rotate 1s ease infinite;
+            }
+            .container>div:nth-child(4),.container>div:nth-child(5){
+                transform: rotate3d(0,1,0, -30deg);
+            }
+            /* 카드만들기 */
+            .container1{
+                perspective: 800px;
+                margin: 100px auto;
+                width: 300px; height: 500px;
+            }
+            .container1>div.stage{
+                position: relative; /*컨텐츠들을 absolute해서 위치시키기 위한 기준점*/
+                transform-style: preserve-3d;
+                width: 300px; height: 500px;
+                transform: rotate3d(0,0,0, 90deg);
+                transform-origin:50% 0; /*transform-origin: X축 Y축 기준 꼭지점을 지정하는 속성*/
+                transition:all .3s ease;
+                animation: rotate 1s ease infinite;
+            }
+            .container1>div.stage>div#front{
+                box-sizing: border-box;
+                position: absolute;
+                left: 0; top: 0;
+                width: 300px; height: 500px;
+                backface-visibility: hidden; /* div#front요소 뿐 아니라 모든 요소들은 배경이 투명하다. 만일 2개의 면이 포개어져있다면, 180도 회전하게 됐을 때 글자나 그림등이 거꾸로 보이게 된다. 이를 방지하는 속성. */
+                background: lightpink;
+                font: bold 120px/500px arial, sans-serif;
+                text-align: center;
+                color: #fff;
+            }
+            .container1>div.stage>div#back{
+                position: absolute;
+                left: 0; top: 0;
+                width: 300px; height: 500px;
+                transform: rotateY(180deg);
+                backface-visibility: hidden;
+                background: lightsalmon;
+                font: bold 120px/500px arial, sans-serif;
+                text-align: center;
+                color: #fff;
+            }
+            /* 이벤트 */
+            
+            .container1:active>div.stage{
+                transform: rotate3d(0,1,0, 180deg);
+            }
+
+            @keyframes rotate{
+                0%{transform: rotateY(0deg);}
+                100%{transform: rotateY(180deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <h1>3d</h1>
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+
+        <div class="container1" >
+            <div class="stage">
+                <div id="front">1</div>
+                <div id="back">2</div>
+            </div>
+        </div>
+    </body>
+</html>

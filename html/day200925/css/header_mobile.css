@@ -1,0 +1,309 @@
+.mobile{
+    display: block;
+}
+/*로고*/
+header {
+    position: fixed;
+    z-index: 600;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.15);
+}
+
+header > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; 
+    height: 6rem;
+    background: #fff;
+}
+header > .header >p.btn{
+    position: relative;
+    margin: 0 2rem;
+    font-size: 0; line-height: 0;
+    width: 2.3rem; height: 0.3rem;
+    background: #000;
+}
+header > .header >p.btn::before{
+    position: absolute;
+    left: 0; top: -0.6rem;
+    content: "";
+    width: 2.3rem; height: 0.3rem;
+    background: #000;
+}
+header > .header >p.btn::after{
+    position: absolute;
+    left: 0; bottom: -0.6rem;
+    content: "";
+    width: 2.3rem; height: 0.3rem;
+    background: #000;
+}
+header > .header > h1 > a > img{
+    margin-left: 50%;
+    flex: 0 1 auto;
+    width: 13rem; height: 2.8rem;
+}
+/*네비게이션*/
+header > .header > nav {  
+    position: absolute;
+    left: -29rem; top: 0; z-index: 1000;  
+    width: 25.6rem;    
+    height: 100vh;
+    background: #07399c;
+    transition: all 1s ease;
+}
+header > .header > nav > p.link_home{  
+    border-bottom: 0.1rem solid #000d5f;
+}
+header > .header > nav > p.link_home>a{
+    display: block;
+    width: 25.6rem; height: 6rem;
+    background: url(../imgs/ic_home_m.png) no-repeat 90% 50%;
+    background-size: 1.8rem 1.5rem;
+}
+header > .header > nav > p.link_home>a>img{
+    width: 10.8rem; height: 1.6rem;
+    margin-top: 2.3rem; margin-left: 2.5rem;
+}
+header>.header>nav>.close>a{
+    position: absolute;
+    top: 0; right: -50px;
+    width: 50px; height: 60px;
+    background: url(../imgs/btn_close_fade.png) no-repeat 50% 50%;
+    background-size: 1.5rem;
+}
+header > .header > nav > ul {
+    min-height: 36rem;    
+    transition: all 1s ease;
+}
+
+header > .header > nav > ul > li { 
+    width: 25.6rem;     
+    background: #07399c;
+    border-bottom: 0.1rem solid #000d5f;
+}    /*li한테 높이가 있으면 안됨!*/ 
+
+header > .header > nav > ul > li > a {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding-left: 2.8rem;
+    font: bold 1.4rem/5.1rem 'Nanum Godic', sans-serif;
+    color: #fff;
+}
+header > .header > nav > ul > li > a::after{
+    position: absolute;
+    top: 2.1rem; right: 4rem;
+    content: "";
+    width: 0.9rem; height: 0.9rem;
+    background: url(../imgs/bu_1depth_down.png) no-repeat 0 0;
+    background-size: 0.9rem 0.9rem;
+}
+/*2depth*/
+header > .header > nav > ul > li > ul { 
+    display:none;
+    padding: 1.5rem 0;
+    width: 25.6rem; 
+    background: #eceff1;    
+    transition: all 1s ease;
+
+}
+
+header > .header > nav > ul > li > ul > li {      
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 3.6rem;
+}
+
+
+header > .header > nav > ul > li > ul > li > a {
+    position: relative;   
+    display: block;
+    padding-left: 2.8rem;
+    color: #07399c;
+}
+header > .header > nav > ul > li > ul > li.is > a::after{
+    position: absolute;
+    top: 1.3rem; right: 4rem;
+    content: "";
+    width: 1.2rem; height: 0.8rem;
+    background: url(../imgs/bu_2depth_m.png) no-repeat 0 0;
+}
+
+/*3depth*/
+header > .header > nav > ul > li > ul > li > ul {
+    display: none;
+    margin: 1.5rem 0 1.5rem 2.8rem;
+    width: 18.8rem;    
+}
+
+header > .header > nav > ul > li > ul > li > ul > li {
+    width: 17.5rem;
+    font-size: 1.4rem;
+    line-height: 5rem;    
+}
+
+header > .header > nav > ul > li > ul > li > ul > li > a {
+    display: block;
+    color: #030e15;
+}
+
+/*제품검색*/
+header > .header > .utill {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 19rem;
+    height: 11.2rem;
+}
+
+header > .header > .utill > div > a {
+    display: block;
+    padding-right: 1.2rem;
+    width: 2.3rem; height: 2.3rem;
+    background:url("../imgs/ic_search_m.png") no-repeat 0 0;
+    background-size: 2.3rem;
+    font-size: 0; line-height: 0;
+}
+
+/*검색창*/
+header > .header > .utill > div > form {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 6rem;
+    width: 100%;
+    border: 0 none;
+    background: #424c51 url("../imgs/sch_close_line.png") no-repeat 94% 50%;
+}
+header > .header > .utill > div > form > fieldset{
+    width: 100%;
+    height: 5rem;
+
+    
+}
+header > .header > .utill > div > form > fieldset > input[type^="sea"] {
+    width: 90%;
+    height: 5rem;
+    border: 0 none;
+    background: #424c51;
+    color: #fff;
+
+}
+
+header > .header > .utill > div > form > fieldset > input[type^="sea"]::placeholder {
+    color: #fff;
+}
+
+header > .header > .utill > div > form > fieldset > input[type^="ima"] {
+    position: absolute;
+    right: 5.3rem;
+    bottom: 1.5rem;
+    z-index: 300;
+}
+
+header > .header > .utill > div > form > fieldset > input:last-of-type {
+    position: absolute;
+    right: 1.3rem;
+    bottom: 1.8rem;
+    z-index: 300;
+}
+
+/*언어선택*/
+header > .header > .utill > div.lang{
+    position: relative;
+    z-index: 400;
+    overflow: hidden;    
+    width: 5rem;
+    height: 3.8rem;
+}
+header > .header > .utill > div.lang > dl {
+    position: absolute;
+    left: 0; top: 0;
+    padding-bottom: 0.5rem;
+    border: 0.1rem solid #a9b0b8;
+    border-radius: 0.4rem;
+    background: #fff;
+}
+header > .header > .utill > div.lang > dl > dd {
+    border-radius: 0.4rem;
+}
+header > .header > .utill > div.lang > dl > dd > a {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 0.3rem;
+    padding-top: 1rem;
+    width: 4.7rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #222222;
+    text-align: center;
+}
+
+header > .header > .utill > div.lang > dl > dd:not(:first-of-type) > a {
+    border-top: 0.1rem solid #a9b0b8;
+}
+
+header > .header > .utill > div.lang > dl > dd:first-of-type {
+    background: url("../imgs/country_off.png") no-repeat 50% 90%;
+}
+
+header>.header >.curtain{
+    display: none;
+    position: absolute; z-index:900;
+    width: 100vw; height: 1000vh;
+    background: rgba(48, 48, 48, 0.808);
+}
+
+/*이벤트*/
+header>.header>p.btn:active ~ nav{
+    left: 0;
+}
+
+header > .header > nav > ul > li:hover > a::after{
+    position: absolute;
+    top: 2.1rem; right: 4rem;
+    content: "";
+    width: 0.9rem; height: 0.9rem;
+    background: url(../imgs/bu_1depth_up.png) no-repeat 0 0;
+    background-size: 0.9rem 0.9rem;
+}
+header > .header > nav > ul > li:hover > ul {
+    display: block;
+}
+
+header > .header > nav > ul > li > ul > li:hover > ul {
+    display: block;
+    border-top: 0.1rem solid #07399c;
+    border-bottom: 0.1rem solid #07399c;
+}
+
+header > .header > nav > ul > li > ul > li.blue:hover {
+    background: #4da4f8;
+}
+
+header > .header > nav > ul > li > ul > li.is:hover >ul{
+    display: block;
+}
+header > .header > nav > ul > li > ul > li.is:hover > a::after{
+    position: absolute;
+    top: 1.5rem; right: 4rem;
+    content: "";
+    width: 1.2rem; height: 0.8rem;
+    background: url(../imgs/bu_2depth_m_off.png) no-repeat 0 0;
+}
+header>.header>p.btn:active ~ .curtain{
+    display: block;
+}
+header > .header > .utill > div > a:hover ~ form{
+    display: block;
+}
+
+header > .header > .utill > div.lang:hover {
+    overflow: inherit;
+}
+header > .header > .utill > div.lang > dl:hover > dd:first-of-type {
+    background: #fff url("../imgs/country_on.png") no-repeat 50% 90%;
+}

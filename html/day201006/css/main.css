@@ -1,0 +1,49 @@
+main {
+    margin: ;
+    padding: ;
+    border: ;
+    width: 100%;
+    height: ;
+}
+
+main > aside {
+    margin: ;
+    padding: ;
+    border: ;
+    width: ;
+    height: ;
+}
+
+main > aside > ul {
+    margin: 0 auto;
+    padding: ;
+    border: ;
+    width: 100rem;
+    height: ;
+}
+
+main > aside > ul > li {
+    margin: ;
+    padding: ;
+    border: ;
+    width: ;
+    height: ;
+}
+main > aside > ul > li:first-child{
+    background: url(../imgs/)
+}
+main > aside > ul > li > div {
+    margin: ;
+    padding: ;
+    border: ;
+    width: ;
+    height: ;
+}
+
+main > aside > ul > li > div > h2 {}
+
+main > aside > ul > li > div > p {}
+
+main > aside > ul > li > div > a {}
+
+main > aside > ul > li > div > a > span {}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1,2,3,4,5 -- 임의의 숫자를 예를들어 3이면 3,2,1,3,4,5. console.log로 표현
+        var num = prompt('1-5까지 원하는 숫자를 입력하세요.');
+        var temp = num;
+        if(num>=0 && num<6){
+            console.log(num);
+            while(true){
+                temp--;
+                console.log(temp);
+                if(temp<2) break;
+            }
+            console.log(num);
+            while(true){
+                if(num>=4) break;
+                num++;
+                console.log(num);                
+            }
+
+        }else{
+            alert('숫자를 다시입력해주세요.');
+        }
+        
+
+        //1. 문제
+
+        var start = 50;
+        var before = 20;
+        var after = 80;
+
+
+    </script>
+</body>
+</html>

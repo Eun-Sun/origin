@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <!-- 1번문제 -->
+    <h1 id="tit">배경색바꾸기</h1>
+    <button id="night">night</button>    
+    <button id="day">day</button>
+
+    <script>
+        var backG = document.querySelector('#body');
+        var btnN = document.querySelector('#night');
+        var btnD = document.querySelector('#day');
+        var h_h = document.querySelector('#tit');
+
+        btnN.addEventListener('click', function(){
+            backG.style.backgroundColor = 'black';
+            h_h.style.color = 'white';
+        })
+        btnD.addEventListener('click', function(){
+            backG.style.backgroundColor = 'white';
+            h_h.style.color = 'black';
+        })
+        
+    </script>
+    
+    <!-- 2번 문제 -->
+    
+    <script>
+        var obj1 = {name:'객체1', age:calcAge, birthYear: 1960}
+        var obj2 = {name:'객체2', age:calcAge, birthYear: 1988}
+        
+        function calcAge(){
+            return 2020 - this.birthYear; 
+        }
+
+        obj1.age = obj1.age();
+        console.log(obj1.age);
+        obj2.age = obj2.age();
+        console.log(obj2.age);
+        console.log('두 사람의 나이 차이는 '+(obj1.age-obj2.age));
+    </script>
+
+    <!-- 3번 문제 -->
+
+    <script>
+        var pencilCase = {pen:'red', pencil:'black', eraser:'white'}
+
+        var yourCase = pencilCase.pen;
+
+        yourCase = 'orange';
+
+        console.log(pencilCase.pen);
+        console.log(yourCase);
+        console.log(yourCase.pen);
+    </script>
+</body>
+</html>

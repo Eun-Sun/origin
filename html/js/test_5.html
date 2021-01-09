@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+	<script>
+	//학교이름이 그린초등학교 이름은 본인이름 모두 입력했을때 , 모두 일치하면 '입학을 축하합니다.' 충족하지 못할시 첫질문으로.
+	
+    /* 
+        while(true){
+		var school = prompt('학교명을 입력하세요.');
+		var name = prompt('이름을 입력하세요.');
+		if(school=='그린초등학교'){
+			if(name){
+			alert('합격을 축하합니다.');
+			break;
+			}	
+		}
+	
+        }
+    */
+	
+	
+	//나이(age)에 의해 5-7은 유치원생, 8-13은 초등학생, 14-16은 중학생, 17-19는 고등학생
+	//기본값은 "국어"이며, 학년이 올라갈수록 "수학","영어","예체능"과목이 추가된다.
+	
+	var age = prompt('나이를 입력하세요');
+	if(age>=5 && age<=19){
+        if(age<=7){
+            alert('유치원생');
+        }else if(age<=13){
+            alert('초등학생');
+        }else if(age<=16){
+            alert('중학생');
+        }else{
+            alert('고등학생');
+        }
+        if(age>=5) alert('국어');
+        if(age>=8) alert('수학');
+        if(age>=14) alert('영어');
+        if(age>=17) alert('예체능');
+    }else{
+        alert('어른이들은 나가주세요:)');
+    }
+	
+	
+    //가위바위보 하려고 한다.
+    //가위일때, '보'를 적으면 질문으로 되돌아가기
+    //바위를 적으면 '축하합니다'
+    while(true){
+        var rock = confirm('가위바위보!!');
+        var rock = prompt('가위!');
+        if (rock=='가위' | rock=='바위' | rock=='보'){
+            if(rock=='바위'){
+                alert('축하합니다');
+                break;
+            }else if(rock=='가위'){
+                alert('동점은 다시!');
+            }else{
+                alert('졌음 다시~');
+            }
+        }else{
+            alert('지금은 가위바위보를 하는중!');
+        }
+    }    
+    
+    
+
+	
+	/* var num = '입사조건';
+	
+	var age = prompt('나이를 적어주세요.')*1;
+	if(age>=20 && age<=35){
+		alert('1차합격');
+		var score = prompt('점수를 입력하세요.')*1;
+		if(score>=80 && score<=100){
+			alert('최종합격')
+		}else{
+			alert('최종불합격');
+		}
+	}else{
+		alert('불합격');
+	}
+	 */
+	</script>

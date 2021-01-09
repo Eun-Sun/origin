@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 1~100까지 숫자 중에서 홀수는 홀수대로 짝수는 짝수끼리의 합을 구하시오.
+        plus();
+                    
+        function plus(){
+            var num1=0;
+            var sum1=0;
+            var sum2=0;
+            while(num1<100){                
+                num1++;
+                if(num1%2==0){                    
+                    sum1+=num1;
+                }else if(num1%2==1){
+                    sum2+=num1;
+                }                
+            }
+            console.log('짝수의 합은 '+sum1);
+            console.log('홀수의 합은 '+sum2);
+        }
+
+
+        
+
+        //2. 파보나치의 수
+        //1, 1, 2, 3, 5, 8, 13, ,,,,
+        //반복하는 숫자를 입력하면 그에 해당하는 파보나치 숫자들을 나열하시오.
+
+        //1. 반복하는 숫자가 필요 ==> 유저 입력
+        //2. prevPrev
+        //3. prev
+        //4. now = prePrev + prev
+        //   prevPrev = prev
+        //   prev = now
+
+        var fibo = nachi(prompt('피보나치 수열을 반복하는 횟수를 기입하시오.'));
+
+        function nachi(x){
+            x*=1;
+            var startNum=2;//앞에서 이미 1,2회차를 끝냈기 때문에 2부터 시작함
+            var result='';
+            if(x==1){
+                var result='1'; //결과 숫자
+            }else if(x>=2){    
+                result='1';        
+                var prevPrev = 0;
+                var prev = 1;
+                var now = prev + prevPrev;
+                result += ','+now; //1,1
+            }
+            if(x>=3){
+                while(startNum<x){
+                prevPrev = prev;
+                prev = now;            
+                now = prevPrev + prev;
+                startNum++;
+                result += ','+now;
+                }
+            }   
+            
+            console.log(result);
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.
+        //임의의 숫자를 입력했을 때 그 숫자부터 ~~+1까지의 합을 도출하시오
+
+        // var num = prompt('숫자를 입력하시면 그 숫자부터 1까지 다 더해드립니다')*1;
+        // var num2 = num;
+        // var num3 = --num2;
+
+        
+        //     while(true){
+        //         if(num){
+        //             num2;
+        //             console.log(num += num3);
+        //             num3--;
+        //             if(num3==0) break;
+        //         }
+        //     }
+
+
+
+        // //선생님 해설본
+        // var sum = num;
+
+        // while(true){
+        //     console.log(num);
+        //     num--;
+        //     sum += num;
+        //     if(num<1){break;}
+        // }
+
+        // var x = 4;
+        // var y = 2;
+        // var tmp;
+
+        //스왑시키기
+
+
+        // tmp = x%y;
+        // x = tmp*y;
+        // y = tmp%x;
+        
+        // tmp=x;
+        // x=y;
+        // y=tmp;
+            
+        // console.log(x);
+        // console.log(y);
+
+        //2.
+        //10000까지 8이라는 숫자가 몇번 나오는지 도출하시오.
+
+
+        //1의 자리에서 나오는 8 + 2의 자리에서 나오는 8 + ... -각 숫자가 1개씩 올라가고 8로 나누기
+
+        // var eight = 0;
+        // var numb = 0;
+
+        // var eight2 = 10;
+        // var numb2 = 0;
+
+        // var eight3 = 100;
+        // var numb3 = 0;
+
+        // var eight4 = 1000;
+        // var numb4 = 0;
+
+        // while(true){
+        //     eight++;
+        //     if(eight/8==1){
+        //         numb++;                
+        //     }else {
+        //         if(eight>10){
+        //         console.log(numb);
+        //         break;
+        //         }
+        //     }  
+        // }
+
+        // while(true){
+        //     eight2++;
+        //     if(eight2%10==8){
+        //         numb2++;
+        //     }else if(eight2/8==10){  
+        //         numb2++;            
+        //     }else{
+        //         if(eight2>100){
+        //         console.log(numb2);
+        //         break;
+        //         }
+        //     }  
+        // }
+
+        // while(true){
+        //     eight3++;
+        //     eight3/=10;
+        //     if(eight3%10==8){
+        //         numb3++;
+        //     }else{
+        //         if(eight3>1000){
+        //         console.log(numb3);
+        //         break;
+        //         }
+        //     }  
+        // }
+
+        //선생님 풀이
+        //1~10000까지 증가되어야할 변수
+        // var num = 0;
+        // var count = 0;
+        // var temp = 0;
+
+        // while(true){
+        //     num++;
+
+        //     temp = num;
+
+        //     while(true){
+        //     if(temp%10 == 8){count++; console.log(temp);}
+            
+        //     temp /= 10;
+
+        //     temp = parseInt(temp);//정수화 시키는 공식
+        //     if(temp<10 && temp!=8) break;            
+        //     }
+
+        //     if(num==10000) break;
+        // }
+        // console.log(count);
+
+
+
+        // var num = 0;
+        // var temp = 0;
+        // var count = 0;
+
+        // while(true){
+        //     num++;
+
+        //     temp = num;
+
+        //     while(true){
+
+        //         if(temp%10==8){count++;}
+        //         temp /= 10;
+
+        //         temp = parseInt(temp);
+
+        //         if(temp<10 && temp!=8){
+        //             break;
+        //         }
+        //     }
+        //     if(num == 10000) break; 
+        // }
+        // console.log(count++);
+
+
+
+        //1~ 600까지의 5가 몇개있는지, 1~7900까지 7이 몇개 들어가는지 각각 출력 후 두 값을 더해 출력하시오.
+
+        var fiv = 0;
+        var count1 = 0;
+        
+        var seve = 0;
+        var count2 = 0;
+        
+        var temp1 = 0;
+
+        while(true){
+            fiv++;
+
+            temp1 = fiv;
+
+            while(true){ //2자리수만 1자리수로 변경되기 때문에 계속해서 반복해서 세자리수, 두자리수 등을 한자리수로 바꿀 필요가 있다.
+                if(temp1%10==5){count1++;}
+                temp1 /= 10;
+
+                temp1 = parseInt(temp1);
+
+                if(temp1<10 && temp1!=5) break;
+            }
+            if(fiv==600) break;
+        }
+        console.log(count1);
+
+        while(true){
+            seve++;
+
+            temp1 = seve;
+
+            while(true){
+                if(temp1%10==7){count2++;}
+
+                temp1 /= 10;
+
+                temp1 = parseInt(temp1);
+                if(temp1<10 && temp1!=7) break;
+            }
+            if(seve == 7900) break;
+        }
+        console.log(count2);
+
+        console.log(count1+count2);
+
+
+
+        //1부터 10000까지 십의 자리수가 2인 숫자가 몇개인지 출력하시오.
+
+        var nums = 19;
+        var temp2 = nums;
+        var point = 0;
+
+        // while(true){
+        //     nums++;
+        //     if((nums/10)%10 == 2){point++; console.log(nums);}
+        //     nums=parseInt(nums);
+            
+
+        //     if(nums==10000) break;
+        // }
+        //     console.log(point);
+
+        while(true){
+            nums++;
+
+            temp2 = nums / 10;
+            temp2=parseInt(temp2);
+            if(temp2%10 == 2){point++; console.log(temp2);}
+
+            if(nums == 10000) break;
+        }
+        console.log(point);
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var num = 0;
+
+var num2 = 0;
+
+var count = 0;
+
+var count2 = 0;
+
+var tmp = 0;
+
+var tmp2 = 0;
+
+while(true){
+
+    num++;
+
+    tmp = num;
+
+    while(true){
+
+        if(tmp%10 == 5){
+
+            count++;
+
+        }
+
+    tmp /= 10;
+
+    tmp = parseInt(tmp);
+
+    if(tmp !=5 && tmp < 10) break;
+
+}
+
+if(num == 600) break;
+
+}
+
+while(true){
+
+num2++;
+
+tmp2 = num2;
+
+while(true){
+
+    if(tmp2%10 == 7){
+
+        count2++;
+
+    }
+
+    tmp2 /= 10;
+
+    tmp2 = parseInt(tmp2);
+
+    if(tmp2 !=7 && tmp2 < 10) break;
+
+}
+
+if(num2 == 7900) break;
+
+}
+
+console.log('5의 개수는 ? '+count);
+
+console.log('7의 개수는 ? '+count2);
+
+console.log('두수의 곱셈은 ? '+count*count2);
+
+
+
+
+
+var num = 0;
+
+var count = 0;
+
+var tmp = 0;
+
+while(true){
+
+    num++;
+
+    tmp = num;
+
+    while(true){
+
+        if((tmp%100) == 2){
+
+            count++;
+
+        }
+
+        tmp /=10
+
+        tmp = parseInt(tmp);
+
+        if(tmp !=2 && tmp < 10) break;
+
+    }
+
+    if(num == 10000) break;
+
+}
+
+console.log('십의자리수가 2인 숫자는?'+count);
+
+while(true){
+            nums++;
+
+            temp2 = nums / 10;
+            temp2=parseInt(temp2);
+            if(temp2%10 == 2){point++; console.log(temp2);}
+
+            if(nums == 10000) break;
+        }
+        console.log(point);
+
+
+
+
+
+var num = prompt('숫자를 입력하시오.')*1;
+
+        var down = 0;
+
+        var up = 0;
+
+        down = num;
+
+        while(down>0 && down<=10){
+
+            console.log(down--);
+
+        }
+
+        up = num;
+
+        while(up>0 && up<=10){
+
+            console.log(up++);
+
+        }
+    </script>
+</body>
+</html>

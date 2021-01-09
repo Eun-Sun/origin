@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            while(true){
+                var gender = prompt('당신의 성별을 입력해주세요.');
+                if(gender=='여성'){
+                    var area = prompt('거주 지역을 입력해주세요');
+                    if(area=='서울'){
+                        alert('회원가입 성공!');
+                        break;
+                    }else if(area == '경기도' | area == '충청남도' | area == '충청북도' | area == '강원도' | area == '전라남도' | area == '전라북도' | area == '경상북도' | area == '경상남도'){
+                        alert('지역지점을 이용해주세요.');
+                    }else{
+                        alert('지역명을 잘못 입력하셨습니다.');
+                    }
+                }else if(gender=='남성'){
+                    var age = prompt('당신의 나이를 입력해주세요.');
+                    if (age >= 0 && age <= 120) {
+                            if (age >= 20 && age <= 30) {
+                                alert('보조회원가입!');
+                                break;
+                            } else {
+                                alert('회원가입이 불가능합니다.');
+                            }
+                    }else{
+                        alert('나이를 잘못 입력하셨습니다.');
+                    }
+                }else{
+                    alert('잘못 입력하셨습니다.');
+                }
+            }
+
+            // while (true) {
+            //     var area = prompt('거주지역을 입력해주세요.');
+            //     var gender = prompt('당신의 성별을 입력해주세요.');
+            //     if (area == '서울' && gender == '여성') {
+            //         alert('회원가입 성공!');
+            //         break;
+            //     } else if (area =='서울' | area == '경기도' | area == '충청남도' | area == '충청북도' | area == '강원도' | area == '전라남도' | area == '전라북도' | area == '경상북도' | area == '경상남도' && gender == '남성' ) {
+            //             var age = prompt('당신의 나이를 입력해주세요.');
+            //             if (age >= 0 && age <= 120) {
+            //                 if (age >= 20 && age <= 30) {
+            //                     alert('보조회원가입!');
+            //                     break;
+            //                 } else {
+            //                     alert('회원가입이 불가능합니다.');
+            //                 }
+            //             }
+            //     }else if (area == '경기도' | area == '충청남도' | area == '충청북도' | area == '강원도' | area == '전라남도' | area == '전라북도' | area == '경상북도' | area == '경상남도' && gender == '여성') {
+            //         alert('회원가입이 불가능합니다.');
+            //     } else {
+            //         alert('회원가입이 불가능합니다.');
+            //     }
+            // }
+
+            // while(true){
+            //     var info = confirm('여성전용 만화카페입니다.');
+            //     var gender = confirm('여성이십니까?');
+            //     if(gender){
+            //         alert('다음단계로');
+            //         var area = confirm('서울에 사시나요?');
+            //         if(area){
+            //             alert('회원가입 성공!');
+            //             break;
+            //         }else{
+            //             alert('지역지점을 이용해주시기바랍니다:)');
+            //         }
+            //     }else{
+            //         alert('보조회원가입단계로');
+            //         var age = prompt('나이를 입력해주세요.');
+            //         if(age>=0 && age<=120){
+            //             if(age>=20 && age<=30){
+            //                 alert('보조회원가입 성공!');
+            //                 break;
+            //             }else{
+            //                 alert('회원가입에 실패하였습니다.');
+            //             }
+            //         }else{
+            //             alert('나이를 잘못입력하셨습니다.');
+            //         }
+            //     }
+
+            // }
+        </script>
+    </body>
+</html>

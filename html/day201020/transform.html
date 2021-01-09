@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{
+            width: 800px;
+            height: 100px;
+            background: rgba(180, 100, 120, 1);
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+
+            /*transform 속성은 블럭요소만 사용가능하다.*/
+            transform: skew(30deg, 0)
+            /*
+            1. translate는 움직이는것, translate(X, Y)
+            transform: scale(2, 1) rotate(45deg) translate(300px, 100px);
+            나중에 적은 것부터 적용
+
+            
+            2. skew는 기울여서 당기는것, 가운데가 각도 기준선 +는 오른쪽 -는 왼쪽으로 감, skew(X,Y)
+            transform: skew(0, -15deg);
+            
+            
+            3. rotate3d(X,Y,Z, 각도); 1은 사용한다는 의미
+            transform: rotate3d(1,0,0, 45deg)
+            */
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>trnasform</h1>
+    <p>트랜스폼을 적용한 요소는 position:relative를 적용한 것과 비슷한 상황을 연출한다.</p>
+    <div> 트랜스폼 </div>
+    <p> 트랜스폼 하단 요소</p>
+
+</body>
+</html>

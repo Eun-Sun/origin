@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // while(true){
+        //     var fibo = prompt('피보나치가 진행될 숫자를 입력하세요.')*1;
+        //     if(!isNaN(fibo)){
+        //         console.log(nachi(fibo));                    
+        //         break;
+        //     }
+            
+        // }
+
+        // function nachi(x){          
+        //     if(x==1 || x==2){
+        //         return 1;
+        //     }
+        //     return nachi(x-1)+nachi(x-2);
+        // }
+
+        function ae(x){          
+            if(x==1 || x==2){
+                return 1;
+            }
+            return ae(x-1)+ae(x-2);
+        }
+
+        while(true){
+            var tmpNum = prompt('피보나치 반복횟수를 입력하시오.')*1;
+            if(!isNaN(tmpNum)){
+                break;
+            }
+        }
+
+        var num = 0;
+        var msg = "";
+
+        while(num<tmpNum){ //반복할 횟수를 넣으면 그 횟수만큼 결과를 모두 얻기위한 반복문
+            num++;
+            var result = ae(num);
+            if(num==1){
+                msg += result;
+            }else{
+                msg += ','+result;
+            }
+            
+        }
+        console.log(msg);
+
+
+    </script>
+</body>
+</html>

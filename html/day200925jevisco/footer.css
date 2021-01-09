@@ -1,0 +1,180 @@
+footer {
+    margin-top: 10rem;
+}
+
+footer > div:first-of-type {
+    width: 100%;
+    background: #263238;
+    height: 5.5rem;
+
+}
+
+footer > div > div {
+    margin: 0 auto;
+    width: 120rem;
+    position: relative;
+}
+
+footer > div > div > ul {
+    float: left;
+
+}
+
+footer > div > div > ul:first-of-type {
+    padding-top: 2rem;
+}
+
+footer > div > div > ul:last-of-type {
+    padding-top: 1.8rem;
+}
+
+footer > div > div > ul > li {
+    float: left;
+}
+
+footer > div > div > ul:first-of-type > li {
+    float: left;
+    padding-right: 1rem;
+    border-right: 0.1rem solid #a1a1a1;
+}
+
+footer > div > div > ul:first-of-type > li:not(:first-of-type) {
+    padding-left: 0.8rem;
+}
+
+footer > div > div > ul:last-of-type > li:first-of-type {
+    margin-left: 0.6rem;
+}
+
+footer > div > div > ul > li > a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #a1a1a1;
+
+}
+
+footer > div > div > dl {
+    float: right;
+    background: #1e292e;
+
+}
+
+footer > div > div > dl > dt {
+    padding-left: 3rem;
+    width: 24rem;
+    height: 5.5rem;
+}
+
+footer > div > div > dl > dt > a {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 5.6rem;
+    font-weight: bold;
+    color: #a1a1a1;
+    background: url(imgs/family_off.png) no-repeat 90% 50%;
+}
+
+footer > div > div > dl > dd {
+    display: none;
+    padding-left: 3rem;
+}
+
+footer > div > div > dl > dd:first-of-type {
+    padding-top: 1rem;
+    border-top: 0.1rem solid #3f4040;
+}
+
+footer > div > div > dl > dd:last-of-type {
+    padding-bottom: 1rem;
+}
+
+footer > div > div > dl > dd > a {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+    font-weight: bold;
+    color: #a1a1a1;
+}
+
+/*맨밑푸터*/
+
+footer > div:last-of-type {
+    background: #e9eaeb;
+}
+
+footer > div > address {
+    margin: 0 auto;
+    padding-top: 2rem;
+    width: 120rem;
+    height: 8.2rem;
+}
+
+footer > div > address > p {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #3f4040;
+}
+
+footer > div > address > p:first-of-type {
+    float: left;
+
+}
+
+footer > div > address > p:last-of-type {
+    clear: both;
+    padding-left: 21rem;
+}
+
+footer > div > address > p > img:first-of-type {
+    margin-top: 0.5rem;
+}
+
+footer > div > address > p:nth-of-type(2) {
+    padding-left: 21rem;
+}
+
+footer > div > address > dl {
+    padding-left: 21rem;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #3f4040;
+}
+
+footer > div > address > dl:before {
+    content: "";
+    position: absolute;
+    top: .4rem;
+    left: 35.4rem;
+    width: 0;
+    height: 1rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0);
+    border-left: 0.1rem solid #3f4040;
+
+}
+
+footer > div > address > dl > dd {
+    float: left;
+    padding-right: 0.7rem;
+}
+
+footer > div > address > dl > dd:not(:first-of-type) {
+    padding-left: 0.7rem;
+}
+
+/*이벤트*/
+footer > div > div > dl:hover {
+    position: absolute;
+    right: 0;
+    bottom: -5.5rem;
+}
+footer > div > div > dl:hover > dd {
+    display: block;
+}
+
+footer > div > div > dl > dd:hover > a {
+    color: #fff;
+}
+
+

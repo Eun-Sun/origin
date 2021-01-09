@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var var2;
+        var variable;
+
+        console.log("variable의 값은?"+variable);
+        var2 = variable;
+        variable = 123;
+        
+        console.log("var의 값은?"+var2);
+        console.log("variable의 값은?"+variable);
+
+        // 연산자
+        // 변수와 변수, 변수와 데이터, 데이터와 데이터끼리 정해진 규칙대로 실행하는 것
+        // 4칙연산 --> +,-,/,*
+        // string 타입은 +연산자만,
+        // number 타입은 4칙연산,
+        // undefined는 +연산자 =화면에 보일때 string으로 보이기때문
+        // boolean 4칙연산 (1과 0이기때문에)=제일 용량이 작음
+        // null은 +연산자 =화면에 보일때 string으로 보이기때문
+
+        // 다른데이터 타입끼이 연산
+        // string + 다른데이터 ==> string (90%)
+        // string타입이 number타입의 모양('10')을 취하고 있다면
+        // number와 계산할때 number처럼 계산한다.
+        // number * 다른데이터 ==> number(NaN)
+        // number / 다른데이터 ==> number(NaN)
+        // boolean 4칙연산 ==> number 
+        // ex) false * 4 = 0 / true * 4 = 4
+
+
+        var str = 'a';
+        var num = 10;
+        var und;
+        var bool = true;
+        console.log(str + num);//'a10'
+        console.log(num * str);//NaN
+        console.log(und + str);//'undefineda'
+        //console.log(bool * 4);//4 
+        //console.log(bool + str);//truea
+        //console.log(++bool);//2
+        console.log(++und);
+        console.log(++str);
+
+
+        //증감연산자
+        //1씩 증가하거나, 1씩 감소할때 사용한다.
+        //++, --
+        //증감연산자는 변수에서만 사용가능하며 전위, 후위가 가능
+        //++변수, --변수, 변수++, 변수--
+        console.log(num++); //num이 1씩 증가 num = num + 1이라는 의미
+                      //후위연산자는 세미콜론 다음에 실행
+        console.log("현재 num값은?"+num);//string타입이 됨
+
+        var result = num++ + 10;
+        console.log(result);
+        console.log(num);
+
+
+        // 4칙 할당 연산자
+        // += -= *= /=
+        // 현재 있는 값에 우측 피연산자의 값을 4칙연산해서 할당한다.
+        // ex> var num = 10;
+        // num += 5; num은 15가 된다.
+
+        // 부등호 연산자
+        // 좌측 피연산자가 기준이 된다. 
+        // >(좌측이 크다) , <(좌측이 작다) , >=(좌측이 작거나 같다) , <=(좌측이 크거나 같다) , ==(같다) , !=(같지않다) --> 할당 연산자가 아님, 저장x
+        // !(NOT연산자) - 부정
+        // ex> !true ----> false
+
+        !bool // false;
+        console.log(!bool)
+
+
+
+        // 논리 연산자
+        // && , ||
+        // && 는 좌항과 우항의 피연산자가 모두 true여야 결과값이 true로 나타난다.
+        // || 는 좌항과 우항의 피연산자 중 하나만 true여도 결과값이 true로 나타난다.
+        // 2가지 이상의 항목을 비교할때 사용 
+
+        console.log(bool && false) // false
+        console.log(bool || false) // true
+
+        var age1 = 20;
+        var age2 = 22;
+        var averageAge = 21;
+
+        var military = true;
+
+        console.log(age1 > averageAge && military);//false
+        console.log(age1 > averageAge || military);//true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

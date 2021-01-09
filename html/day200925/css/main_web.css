@@ -1,0 +1,363 @@
+main {
+position: relative;
+
+}
+
+
+/*비디오*/
+main > div:first-of-type {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width: 100%;
+    background: #dbdbdb;
+    text-align: center;
+
+}
+
+main > div > video {
+    margin-top: 8.3rem;
+    width: 120rem;
+    height: 100%;
+}
+
+/*도료 종류*/
+main > div.img {
+    margin: 0 auto;
+    width: 120rem;
+    overflow: hidden;
+}
+main > div.img>dl{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 30rem; height: 29rem;
+}
+
+main > div.img>dl>dd:not(:last-of-type){
+    position: absolute;
+    top: 0;left: 0;
+}
+main > div.img>dl>dd:first-of-type{
+    z-index: 100;
+}
+main > div.img>dl>dd:last-of-type{
+    position: absolute;
+    right: -12%; bottom: 0;
+    z-index: 200;
+}
+main > div.img>dl>dd>a{
+    display: block;
+}
+main > div.img>dl>dd:not(:last-of-type)>a>img{
+    width: 30rem; height: 28.9rem;
+}
+main > div.img>dl:first-of-type>dd:last-of-type>a>img{
+    width: 26rem; height: auto;
+}
+main > div.img>dl:nth-of-type(2)>dd:last-of-type>a>img{
+    width: 24.8rem; height: auto;
+}
+main > div.img>dl:nth-of-type(3)>dd:last-of-type>a>img{
+    width: 25rem; height: auto;
+}
+main > div.img>dl:nth-of-type(4)>dd:last-of-type>a>img{
+    width: 27.2rem; height: auto;
+}
+/*이벤트*/
+main > div.img>dl:hover>dd:nth-of-type(2){
+    z-index: 200;
+    
+}
+main > div.img>dl:hover>dd:last-of-type{
+    right: 0; bottom: 0;
+    z-index: 300;
+    transition: all .70s;
+}
+
+/*뉴스*/
+main > div.new {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 120rem;
+    margin-top: 5rem;
+}
+
+main > div.new > section {
+    float: left;
+    box-sizing: border-box;
+    padding: 2rem 2.8rem 0 2rem;
+    border-top: 0.2rem solid #1b49a2;
+    width: 38.8rem
+}
+
+main > div.new > section > h1:nth-child(2) {
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid #e1e1e1;
+    font: bold 2.5rem 'Nanum Godic', sans-serif;
+    color: #0f409d;
+}
+
+/*첫번째 뉴스*/
+
+main > div.new > section > div.news> article.first {
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid #e1e1e1;
+}
+
+main > div.new > section > div.news > article > p:first-of-type {
+    box-sizing: border-box;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    width: 5.8rem;
+    height: 2rem;
+    border: 0.1rem solid #e17350;
+    border-radius: 0.1rem;
+    font: bold 1.1rem/2rem 'Nanum  Godic', sans-serif;
+    color: #e17350;
+    text-align: center;
+}
+
+main > div.new > section > div.news> article > p > a {
+    display: block;
+    padding-right: 0.8rem;
+    font: bold 1.7rem/2.6rem 'Nanum Godic', sans-serif;
+    color: #222222;
+}
+
+main > div.new > section > div.news> article > p > time {
+    font-size: 1.1rem;
+    line-height: 3.5rem;
+}
+
+main > div.new > section > div.news> article > p:last-of-type {
+    display: inline-block;
+    padding: 1rem 0 1rem 0;
+    font: 1.4rem/2.2rem 'Nanum Godic', sans-serif;
+}
+
+/*움직이는 뉴스*/
+main > div.new > section > div.news > div  div > article.move {
+    padding: 2rem 0;
+    border-bottom: 0.1rem solid #e1e1e1;
+    overflow: hidden;
+}
+
+main > div.new > section > div.news > div  div > article.move > dl {
+    float: left;
+    width: 34rem;
+}
+
+main > div.new > section > div.news > div  div > article.move > dl > dt {
+    float: left;
+    box-sizing: border-box;
+    border: 0.1rem solid #e17350;
+    border-radius: 0.1rem;
+    width: 5.8rem;
+    height: 2.1rem;
+    font: bold 1.1rem/2rem 'Nanum  Godic', sans-serif;
+    color: #e17350;
+    text-align: center;
+}
+main > div.new > section > div.news > div  div > article.move > dl > dt.comp {
+    float: left;
+    box-sizing: border-box;
+    border: 0.1rem solid  #58b549;
+    border-radius: 0.1rem;
+    width: 5.8rem;
+    height: 2.1rem;
+    font: bold 1.1rem/2rem 'Nanum  Godic', sans-serif;
+    color: #58b549;
+    text-align: center;
+}
+main > div.new > section > div.news > div  div > article.move > dl > dd {
+    float: left;
+}
+
+main > div.new > section > div.news > div  div > article.move > dl > dd > a {
+    float: left;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+    width: 19.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: bold 1.3rem/2.1rem 'Nanum Godic', sans-serif;
+    color: #222222;
+}
+
+main > div.new > section > div.news > div  div > article.move > dl > dd > time {
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+    color: #222222;
+}
+
+/* 숨겨진 뉴스 */
+main > div.new > section >.news >.sub_news{
+    position: relative;
+    width: 34rem;
+    height: 24.8rem;
+    overflow: hidden;
+}
+main > div.new > section >.news > .sub_news> .m_sub_news{
+    position: absolute;
+    left: 0; top: 0;
+    float: left;
+    width: 102rem;
+}
+main > div.new > section >.news > .sub_news> .m_sub_news >.no_1{
+    float: left;
+}
+main > div.new > section >.news > .sub_news> .m_sub_news >.no_2{
+    float: left;
+}
+main > div.new > section >.news > .sub_news> .m_sub_news >.no_3{
+    float: left;
+}
+
+
+/*뉴스페이징*/
+
+main > div.new > section > div:last-of-type {
+    overflow: hidden;
+    margin-top: 4.3rem;
+    position: relative;
+    width: 34rem;
+}
+
+main > div.new > section > div:last-of-type > a:first-of-type {
+    float: left;
+    width: 1.2rem;
+    height: 2.1rem;
+    background: url(../imgs/btn_main_news_left.png) no-repeat 0 0;
+}
+
+main > div.new > section > div:last-of-type > ul {
+    position: absolute;
+    left: 1.5rem;
+    top: 0.5rem;
+    z-index: 200;
+    width: 100%;
+    height: 2.1rem;
+    text-align: center;
+    width: 32.3rem;
+}
+
+main > div.new > section > div:last-of-type > ul > li {
+    display: inline-block;
+    margin-left: 1.3rem;
+}
+
+main > div.new > section > div:last-of-type > a:last-of-type {
+    float: right;
+    width: 1.2rem;
+    height: 2.1rem;
+    background: url(../imgs/btn_main_news_right.png) no-repeat 0 0;
+}
+
+
+/*회사소개 등*/
+main > div.new > div.intro {
+    float: right;
+    width: 81rem;
+    overflow: hidden;
+}
+
+main > div.new > div.intro > section {
+    position: relative;
+    float: left;
+    margin-left: 1.8rem;
+    border-top: 0.2rem solid #003195;
+}
+
+main > div.new > div.intro > section > h1 > a {
+    margin-top: 2rem;
+    display: block;
+    font: bold 2.5rem 'Nanum Godic', sans-serif;
+    color: #093b9a;
+}
+
+main > div.new > div.intro > section > p:first-of-type > a {
+    display: block;
+    font: 1.3rem/7rem 'Nanum Godic', sans-serif;
+    color: #093b9a;
+}
+
+main > div.new > div.intro > section > p:nth-of-type(2) > a > img {
+    width: 38.7rem;
+    height: auto;
+}
+
+main > div.new > div.intro > section:first-of-type,
+section:nth-of-type(2) {
+    margin-bottom: 5rem;
+}
+
+main > div.new > div.intro > section > p:nth-of-type(3) > a {
+    position: absolute;
+    right: 1.7rem;
+    top: 2rem;
+}
+
+/*추가검색*/
+main > div.search {
+    margin: 0 auto;
+    width: 120rem;
+    overflow: hidden;
+}
+
+main > div.search > ul {
+    float: left;
+    margin-top: 8rem;
+}
+
+main > div.search > ul > li {
+    float: left;
+    box-sizing: border-box;
+    width: 38.6rem;
+    height: 9.9rem;
+    border: 0.1rem solid #d1d1d1;
+    background: url(../imgs/img_menu_more.png) no-repeat 95% 50%;
+}
+
+main > div.search > ul > li:not(:first-of-type) {
+    margin-left: 2.1rem;
+}
+
+main > div.search > ul > li:first-of-type >a {
+    background: url(../imgs/bg_main_btn01.png) no-repeat 10% 50%;
+}
+main > div.search > ul > li:nth-of-type(2)>a {
+    background: url(../imgs/bg_main_btn02.png) no-repeat 10% 50%;
+}
+main > div.search > ul > li:last-of-type>a {
+    background: url(../imgs/bg_main_btn03.png) no-repeat 10% 50%;
+}
+main > div.search > ul > li > a {
+    display: block;
+    padding-left: 9.2rem;
+    font-size: 1.8rem;
+    line-height: 10rem;
+    color: #083a9a;
+}
+
+/*위로가기*/
+main>p{
+    position: fixed;
+    left: 50%; bottom: 17.7rem;
+    z-index: 1000;
+    margin-left: 55rem;
+    width: 5rem; height: 5rem;
+    background: url(../imgs/btn_top.png) no-repeat 0 0;
+    opacity: 0.5;
+    
+}
+main>p>a{
+    display: block;
+    width: 5rem; height: 5rem;
+    font-size: 0;
+}
+
+/* 이벤트 */
+main>p:hover{
+    opacity: 1;
+}

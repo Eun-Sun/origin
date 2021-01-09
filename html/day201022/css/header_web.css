@@ -1,0 +1,47 @@
+.mobile, .tablet {
+    display: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: beige;
+    box-shadow: 0 3px 2px 0 rgba(80, 80, 80, .5);
+}
+header > div.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 999px;
+    height: 80px;
+    background: teal;
+}
+header > div.center > h1 {
+    width: 200px;
+    height: 40px;
+    background: lightblue;
+}
+header > div.center > nav {
+    width: 600px;
+    height: 30px;
+    background: lightsalmon;
+}
+header > div.center > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div.center > nav > ul > li {
+    flex: 0 0 auto;
+
+}
+header > div.center > dl {
+    overflow: hidden;
+    width: 40px;
+    height: 30px;
+    background: lightsteelblue;
+}
+header > div.center > dl > dd {
+    height: 30px;
+}

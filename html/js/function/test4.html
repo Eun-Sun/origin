@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="num">1</h1>
+    <p><button id="plus">+(증가)</button><button id="minus">-(감소)</button></p>
+    <script>
+        //document.write("전달인자"); --> body에 쓰여진다. console.log와 비슷한 역할
+        //document.write를 사용할때는 꼭 요소가 비어있어야 한다.
+
+        var n = 0;
+        var numNum = document.querySelector('#num');
+        //기존의 값은 삭제하고 새로 값을 입력한다. 
+        //요소객체에 글자를 넣는 속성은 innerText
+        //요소객체에 요소를 넣는 속성은 innerHTML - 문자 숫자 다 가능. (요소, string 등...)
+        //numNum.innerHTML="<a href='#'>하하하</a>"; // "" '' 분류해서 사용해야함. 밖 ""이면 안쪽 ''/ 밖 ''이면 안쪽 ""
+
+        //방법 1.
+        var btnP = document.querySelector('#plus');
+        btnP.addEventListener('click',function(){
+            if(n<10){numNum.innerHTML = ++n;}
+        });
+
+        //방법 2 - 비표준     
+        // btnP.onclick=function(){ //사라질 방법 ㅎ
+        //if(n<10){numNum.innerHTML = ++n;}
+        //}
+
+
+        var btnM = document.querySelector('#minus');
+        btnM.addEventListener('click',function(){
+            if(n>1){numNum.innerHTML = --n;}
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="t_dp"></h1>
+    <p id="n_dt"></p>
+    <script>
+        //date
+        //시간을 나타내는 객체
+        //javascript가 new Date()를 실행하는 순간의 시간을 retuen한다.
+        //모든 date로 인해서 return되는 시간관련데이터는 number 타입이다.
+        var setT = setInterval(flowTime,1000); //자동함수가 진행되는 과정을 가짐. (변수에 할당이 되야 자동함수를 삭제할 수 있음.)
+        function flowTime(){
+            var time = new Date();
+            var year = time.getFullYear(); //년도
+            var month = time.getMonth(); //달을 return한다.
+            var date = time.getDate();
+            var days = ['일', '월', '화', '수', '목', '금', '토', '일'];
+            var day = time.getDay();
+
+            var hours = time.getHours();
+            var mins = time.getMinutes();
+            var secs = time.getSeconds();
+
+            var flag = true;
+            if(hours>12){
+                hours = hours-12;
+                flag = true;
+            }else if(hours<=12){
+                flag = false;
+            }
+            if(hours<10){
+                hours='0'+hours                
+            }
+            if(mins<10){
+                mins='0'+mins
+            }
+            if(secs<10){
+                secs='0'+secs
+            }
+            if(flag){
+                hours = "p.m. "+hours;
+            }else{
+                hours = "a.m. "+hours;
+            }
+            var txt = year+'-'+month+'-'+date+"("+days[day]+")";
+            txt += "  "+hours+":"+mins+":"+secs;
+
+            if(hours == 'p.m. 05' && mins=='42' && secs == 55){
+                clearInterval(setT);
+                document.getElementById('t_dp').style.color='lightcoral';
+                document.getElementById('t_dp').style.background='lightgreen';
+
+            }else{
+                document.getElementById('t_dp').innerText = txt;
+            }
+
+            
+        }
+        
+
+        //자동함수
+        //setInterval(fn, 시간), setTimeout(fn, 시간)
+        //setInterval은 두번째 전달인자인 시간마다 첫번째 전달인자 fn을 호출
+        //setTimeout은 두번째 전달인자인 시간이 흐르면 첫번째 전달인자 fn을 한번만 호출
+
+        //자동함수는 변수에 할당이 되어야지만, 삭제가 가능하다.
+        //ex> var autoT = setInterval(fn,시간);
+        //    clearInterval(autoT);
+
+        //ex> var autoT2 = setTimeout(fn, 시간);
+        //    clearTimeout(autoT2);
+
+        //클로져
+        //1. 함수내부에 함수
+        //2. 외부함수에 지역변수가 존재
+        //3. 내부함수는 외부함수가 실행될때, 외부에 저장되어야 한다.
+        //4. 1~3이 제대로 잗공하면, 외부함수가 실행되면서 지역변수가 사라지지 않는다.
+        //5. 외부함수의 지역변수의 내부함수에서 지속사용할 수 있다.
+        setInterval((function(){
+            var p = document.getElementById('n_dt');
+            var num = 0
+            return function(){
+            num++;
+            p.innerText = num;
+            }
+        })(), 1000)
+            
+
+        
+
+    </script>
+</body>
+</html>

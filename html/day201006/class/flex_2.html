@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <style>
+            ul.float {
+                overflow: hidden;
+                margin: 0 auto;
+                max-width: 1200px;
+
+            }
+            ul.float > li {
+                overflow: hidden;
+                position: relative;
+                float: left;
+                width: 25%;
+                font-size: 0; line-height: 0;
+
+            }
+            ul.float > li > a {
+                display: block;
+            }
+            ul.float > li > a > img {
+                width: 100%;
+                /* text와 동일해서 base-line에 위치함. 그래서 좀 더 밑에 위치  */
+            }
+            ul.float > li > a > img:first-child {
+                /* 얘까지 absolute를 주면 li a는 사이즈를 알 방법이 ㅇ벗음 */
+            }
+            ul.float > li > a > img:nth-child(2) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: all .50s ease;
+                /* transition은 이벤트에 시간 애니메이션을 지정하는 속성
+                   transition:all 시간 함수;
+                   --> 시간동안 함수가 가리키는 변경된 속성의 애니메이션을 실행한다. */
+            }
+            ul.float > li > a > img:nth-child(3) {
+                position: absolute;
+                right: -30px;
+                bottom: 0;
+                width: 85%;
+                transition: all .50s ease;
+            }
+
+            /*이벤트*/
+            ul.float>li:hover>a>img:nth-child(2){opacity: 1;}
+            ul.float>li:hover>a>img:nth-child(3){right: 0;}
+
+
+
+
+            /*  */
+            ul.flex {
+                display: flex;
+                margin: 0 auto;
+                max-width: 1200px;
+                
+            }
+            ul.flex > li {
+                flex: 1 1 25%;
+                overflow: hidden;
+                position: relative;
+                font-size: 0; line-height: 0;
+            }
+            ul.flex > li > a {
+                display: block;
+            }
+            ul.flex > li > a > img {
+                width: 100%;
+            }
+            ul.flex > li > a > img:first-child {}
+            ul.flex > li > a > img:nth-child(2) {
+                position: absolute;
+                left: 0; top: 0;
+                
+            }
+            ul.flex > li > a > img:nth-child(3) {
+                position: absolute;
+                right: -30px; bottom: 0;
+                width: 85%;
+                
+            }
+
+            /*이벤트*/
+            ul.flex>li:hover>a>img:nth-child(2){}
+            ul.flex>li:hover>a>img:nth-child(3){}
+
+
+        </style>
+    </head>
+    <body>
+        <ul class="float">
+            <li>
+                <a href="#"><img src="../day_20.09.25_jevisco/imgs/bg_main_pr01.jpg" alt="건축용 도료 컬러로 느껴지다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/bg_main_pr01_over.jpg"
+                        alt="건축용 도료 컬러로 느껴지다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/product_object01.png"
+                        alt="건축용 도료 컬러로 느껴지다"></a>
+            </li>
+            <li>
+                <a href="#"><img src="../day_20.09.25_jevisco/imgs/bg_main_pr02.jpg" alt="공업용 도료 컬러로 만나다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/bg_main_pr02_over.jpg"
+                        alt="공업용 도료 컬러로 만나다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/product_object02.png"
+                        alt="공업용 도료 컬러로 만나다"></a>
+            </li>
+            <li>
+                <a href="#"><img
+                    src="../day_20.09.25_jevisco/imgs/bg_main_pr03.jpg"
+                    alt="선박중방식용 도료 컬러로 보호하다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/bg_main_pr03_over.jpg"
+                        alt="선박중방식용 도료 컬러로 보호하다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/product_object03.png"
+                        alt="선박중방식용 도료 컬러로 보호하다"></a>
+            </li>
+            <li>
+                <a href="#"><img src="../day_20.09.25_jevisco/imgs/bg_main_pr04.jpg" alt="자동차보수용도료">
+                <img src="../day_20.09.25_jevisco/imgs/bg_main_pr04_over.jpg" alt="자동차보수용도료">
+                <img src="../day_20.09.25_jevisco/imgs/product_object04.png" alt="자동차보수용도료"></a>
+            </li>
+        </ul>
+
+        <ul class="flex">
+            <li>
+                <a href="#"><img src="../day_20.09.25_jevisco/imgs/bg_main_pr01.jpg" alt="건축용 도료 컬러로 느껴지다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/bg_main_pr01_over.jpg"
+                        alt="건축용 도료 컬러로 느껴지다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/product_object01.png"
+                        alt="건축용 도료 컬러로 느껴지다"></a>
+            </li>
+            <li>
+                <a href="#"><img src="../day_20.09.25_jevisco/imgs/bg_main_pr02.jpg" alt="공업용 도료 컬러로 만나다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/bg_main_pr02_over.jpg"
+                        alt="공업용 도료 컬러로 만나다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/product_object02.png"
+                        alt="공업용 도료 컬러로 만나다"></a>
+            </li>
+            <li>
+                <a href="#"><img
+                    src="../day_20.09.25_jevisco/imgs/bg_main_pr03.jpg"
+                    alt="선박중방식용 도료 컬러로 보호하다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/bg_main_pr03_over.jpg"
+                        alt="선박중방식용 도료 컬러로 보호하다">
+                    <img
+                        src="../day_20.09.25_jevisco/imgs/product_object03.png"
+                        alt="선박중방식용 도료 컬러로 보호하다"></a>
+            </li>
+            <li>
+                <a href="#"><img src="../day_20.09.25_jevisco/imgs/bg_main_pr04.jpg" alt="자동차보수용도료">
+                <img src="../day_20.09.25_jevisco/imgs/bg_main_pr04_over.jpg" alt="자동차보수용도료">
+                <img src="../day_20.09.25_jevisco/imgs/product_object04.png" alt="자동차보수용도료"></a>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //첫번째 문제
+        //1. 임의의 숫자를 입력받으며, 값을 입력받는 변수는 num1이라고 한다.
+        //2. 입력받은 숫자가 홀수이면 제곱을 하고 짝수이면 2배로 만드는
+        //   함수를 작성하시오. 값을 alert으로 띄우도록 한다.
+        //   함수명은 test라고한다.
+
+        while(true){
+        var num = test(prompt('숫자를 입력하세요.'));
+        if(num){break;}
+        alert('숫자만 입력하세요');
+        }        
+        alert(num);
+
+
+        function test(x){
+            x*=1;
+            if(isNaN(x)){return false;} //if(!isNaN(x)) isNaN(전달인자)-->전달인자는 숫자가 아닌 형식의 number타입 ---> true를 return, 숫자형식을 만들면 false를 return
+            var result;
+            if(x%2==0){
+                result=x*2;
+            }else{
+                result=x*x;
+            }
+            return result;
+        }
+
+        //선생님 풀이
+        /*
+        while(true){
+            var num1 = prompt("숫자를 입력하세요")*1;
+            if(!isNaN(num1)){
+                test(num1);
+                break;
+            }
+        }
+
+        function test(num){
+            if(x%2==0){
+                result=x*2;
+            }else if(x%2==1{
+                result=x*x;
+            }else{
+                alert(num);
+            }
+        }
+        */
+
+        //두번째 문제
+        //임의의 숫자를 입력하면 구구단을 완성하도록 한다.
+
+        while(true){
+        var num1 = gugu(prompt('숫자를 입력해 주세요'));
+        if(num1){break; }
+        alert('숫자만 입력하세요');        
+        }
+
+        function gugu(x){
+            x*=1;
+            var y = 0;
+            var result1 = 0;
+            if(isNaN(x)){return false;}            
+            while(true){
+            y++;            
+            result1 = x*y;
+            console.log(x+'x'+y+'='+result1);
+            if(y==9) break;
+            }
+            return result1;
+        }
+
+        
+
+        //세번째 문제
+        //임의 숫자 두개를 따로 입력하면, 두 숫자 중 작은 숫자에서 큰 숫자까지 합산을 출력
+
+        // var num2 = plus(prompt('숫자를 입력하세요.') , prompt('숫자를 입력하세요.'));
+
+        // function plus(x, y){
+        //     x*=1;
+        //     y*=1;
+        //     if(isNaN(x)){return false;}
+        //     if(isNaN(y)){return false;}
+        //     var result;
+        //     var num = x;
+        //     var sum = num;
+        //     while(true){                
+        //         if(x<y){
+        //             num++
+                    
+        //         }
+        //     }
+
+        // }
+
+
+        //선생님 풀이
+        var num2 = sumNum(prompt('숫자 한개를 입력하세요.') , prompt('나머지 숫자 한개를 입력하세요.'));
+
+        function sunNum(num1, num2){
+            var temp = 0;
+            var sum=0;
+            var process = "";
+
+            if(num1>num2){//num1은 무조건 작은 숫자로 만들기 위한 swap
+                temp = num1;
+                num1 = num2;
+                num2 = temp;
+            }
+
+            while(true){
+                if(sum==0){
+                    process += num1; // +5+6+7+8
+                }else{
+                    process +="+"+num1; //
+                }
+                sum += num1;
+                
+                num1++;
+
+                if(num1>num2){ break; } 
+            }
+            console.log(process+'='+sum);
+        }
+
+
+    </script>
+</body>
+</html>

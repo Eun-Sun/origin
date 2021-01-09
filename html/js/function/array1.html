@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{width: 400px; border:3px solid lightslategrey;}
+        td{width:100px; height:50px; border: 1px solid lightseagreen; text-align: center;}
+        th{width:100px;}
+    </style>
+</head>
+<body>
+    <h1>아이스크림</h1>
+    <form action="test.jsp" name="icecream">
+        <p><label for="names">이  름</label><input type="text" id="names" name="names"></p>
+        <p><label for="price">가  격</label><input type="text" id="price" name="price"></p>
+        <p><label for="brand">브랜드</label><input type="text" id="brand" name="brand"></p>
+        <button name="btnInput">입력</button>
+        <button name="btnShow">정보 보기</button>
+        <button name="btnNames">아이스크림명</button>
+        <button name="btnPrices">아이스크림가격</button>
+        <button name="btnBrands">아이스크림브랜드</button>
+    </form>
+    <h2>아이스크림 정보</h2>
+    <div id="showBox">
+        
+    </div>
+    <h2 id="per"></h2>
+    <div id="showList"></div>
+    <script>
+        document.icecream.btnNames.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('#per').innerText="아이스크림 이름";
+            document.querySelector('#showList').innerText = names.join(', '); //a, b, c
+        });
+        document.icecream.btnPrices.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('#per').innerText="아이스크림 가격";
+            document.querySelector('#showList').innerText = price.join(', ');
+        });
+        document.icecream.btnBrands.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('#per').innerText="아이스크림 브랜드";
+            document.querySelector('#showList').innerText = brand.join(', ');
+        });
+
+        //이벤트연결
+        document.icecream.btnInput.addEventListener('click', function(e){
+            e.preventDefault();
+            var na = document.icecream.names.value;
+            var pr = document.icecream.price.value*1;
+            var br = document.icecream.brand.value;
+
+            if(na !="" && pr !="" && br !=""){
+                names.push(na);
+                price.push(pr);
+                brand.push(br);
+                alert('입력됐음');
+            }else{
+                alert('값이 입력되지 않았습니다. 확인하고 다시 실행하시오.');
+            }
+                        
+
+        });
+
+        document.icecream.btnShow.addEventListener('click', function(e){
+            e.preventDefault();
+            showIcecream();
+        });
+
+        var names = ['브라보콘', '구구콘', '메타콘', '월드콘', '허쉬콘']
+        var price = [1500, 2000, 1800, 1500, 2400]
+        var brand = ['롯데', '빙그레', '해태', '오리온', '삼양']
+
+        var icecream = [names, price, brand]
+
+        //2중 for문
+        // document.write('<table><thead><tr><th colspan="6">아이스크림</th></tr></thead><tbody>');
+        // for(var i = 0; i<icecream.length; i++){
+        //     document.write('<tr>');
+        //     if(i==0){
+        //         document.write('<th>아이스크림 이름</th>');
+        //     }else if(i==1){
+        //         document.write('<th>가격</th>');
+        //     }else if(i==2){
+        //         document.write('<th>브랜드</th>');
+        //     }
+        //     for(var j = 0; j<price.length; j++){
+        //         document.write('<td>'+icecream[i][j]+'</td>');
+        //     }
+        //     document.write('</tr>');
+        // }
+        // document.write('</tbody></table>');
+
+        function showIcecream(){
+            var txt = '<table><thead><tr><th>이름</th><th>가격</th><th>브랜드</th></tr></thead><tbody>';
+                for(var n =0; n<names.length; n++){
+                    txt += '<tr>';
+                    for(var i = 0; i<icecream.length; i++){
+                        
+                        txt += '<td>'+icecream[i][n]+'</td>';
+                    }
+                    txt += '</tr>';
+                }
+                txt += '</tbody></table>';
+
+            var box = document.querySelector('#showBox');
+            box.innerHTML = txt;
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body{font-family:'nanum';}
+
+ 
+
+ 
+
+/* main sub navigator */
+
+ 
+
+ 
+
+main>section.contents{
+
+    width:84.8rem; 
+
+    border:0.1rem solid #dcdcdc;
+
+}
+
+ 
+
+main>section.contents>div.titBar{
+
+    height:5.6rem;
+
+    background:url(../day17/imgs/tit_bg.gif) repeat-x 0 0;
+
+}
+
+ 
+
+main>section.contents>div.titBar>h4{
+
+    padding-left:1.5rem;
+
+    font:bold 1.8rem/5.4rem 'nanum',sans-serif;
+
+    color:#111;
+
+}
+
+ 
+
+main>section.contents>div.titBar>dl{
+
+    display:none;
+
+    padding-left:1.3rem;
+
+    font-size:1.1rem; 
+
+    background:url(../day17/imgs/ico_home.gif) no-repeat 0 50%;
+
+}
+
+ 
+
+main>section.contents>div.titBar>dl>dt{
+
+    font-size:0; line-height:0;
+
+}
+
+ 
+
+main>section.contents>div.titBar>dl>dd{
+
+    color:#555;
+
+}
+
+main>section.contents>div.titBar>dl>dd>strong{
+
+    color:#333;
+
+}
+
+ 
+
+/* 본문 text */
+
+ 
+
+article.txt{
+
+    padding:3.3rem 2.5rem 0 2.5rem;
+
+}
+
+ 
+
+article.txt>.titBar>dl{ font-size: 11px; }
+
+article.txt h5{
+
+    padding-left:2.3rem;
+
+    font-weight:bold; 
+
+    font-size:1.6rem; line-height:1.8rem; color:#1e61a8;
+
+    background:url(../day17/imgs/h2_bluet.gif) no-repeat 0 40%;    
+
+}
+
+article.txt .conTxt{ font-size:12px; font-family:"돋움",sans-serif; }
+
+ 
+
+
+/*위로가기 하단*/
+/*본문 마무리*/
+.top{
+    margin: 6.5rem 1.8rem .4rem 1.8rem; 
+    width: 8.1rem; height: 2.3rem;
+    background: #636363;
+}
+
+.top>a{
+    display: block;
+    font: bold 1.3rem/2.3rem "돋움", sans-serif;
+    text-align: center;
+    color: #fff;
+}
+.top>a:before{
+    display: inline-block;
+    content:"";
+    width: 0; height: 0;
+    border: 0.4rem solid rgba(0,0,0,0);
+    border-bottom-color: #fff;
+}
+.top+blockquote{
+    
+}
+.top+blockquote 
+
+ 
+
+ 

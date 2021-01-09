@@ -1,0 +1,101 @@
+.mobile, .web {
+    display: none;
+}
+.tablet{
+    display: block;
+}
+header{    
+    position: fixed;
+    width: 100%;
+    background: whitesmoke;
+    box-shadow: 0 2px 2px rgba(126, 126, 126, 0.5);
+}
+header>.center{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; height: 60px;
+    background: lightblue;
+}
+header>.center>p.btn{
+    position: relative;
+    margin:0 20px;
+    font-size: 0; line-height: 0;
+    width: 30px; height: 3px;
+    background: black;
+}
+header>.center>p.btn:before{
+    position: absolute;
+    left:0; top: -10px; 
+    content: "";
+    width: 30px; height: 3px;
+    background: black;
+}
+header>.center>p.btn:after{
+    position: absolute;
+    left:0; top: 10px; 
+    content: "";
+    width: 30px; height: 3px;
+    background: black;
+}
+header>.center>h1{
+    width: 200px; height: 60px;
+    background: rgb(60, 124, 163);
+    text-align: center;
+    font: bold 15px/ 60px '맑은 고딕', sans-serif;
+    color: white;
+}
+header>.center>nav{
+    position: absolute; z-index: 9999;
+    top: 0; left: -250px;
+    width: 200px;
+    background-color: wheat;
+    transition: all 1s ease;
+}
+header>.center>nav>.link_home{
+    width: 200px;
+    height: 60px;
+    background: lightpink;
+}
+header>.center>nav>.close{
+    position: absolute;
+    top: 0; right: -50px;
+    width: 50px; height: 60px;
+    background: lightsalmon;
+}
+header>.center>nav>ul{     
+    min-height: 270px;   
+}
+header>.center>nav>ul>li{
+    height: 50px;
+}
+header>.center>nav>ul>li>a{
+    color: lightslategrey;    
+    font:20px/50px '맑은 고딕', sans-serif;
+}
+header>.center>dl{
+    overflow: hidden;
+    height: 60px;
+    background: mediumaquamarine;
+    text-align: center;
+    font: 15px/60px arial, sans-serif;
+    color: white;
+}
+header>.center>dl>dd{
+    height: 50px;
+}
+
+header>.center>.curtain{
+    display: none;
+    position: absolute; z-index:9000;
+    width: 100vw; height: 1000vh;
+    background: rgba(48, 48, 48, 0.808);
+}
+
+/* 이벤트 */
+header>.center>p.btn:active ~ nav{
+    left: 0;
+}
+header>.center>p.btn:active ~ .curtain{
+    display: block;
+}

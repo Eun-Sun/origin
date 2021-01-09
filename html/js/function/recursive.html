@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var k = recursive(2);
+        // alert(k);
+
+        // function recursive(x){
+        //     var result ;
+        //     x--;
+        //     if(x==0) return x;
+        //     result = recursive(x);
+        //     alert('뭘까요'+result);
+        //     return x;
+        // }
+
+        // var num = sumNum(prompt('숫자를 입력하세요')*1);
+        // console.log('모두 더한 값은 '+num);
+
+        // function sumNum(x){
+        //     console.log(x);
+        //     if(x==0) return x;      
+        //     x+=sumNum(x-1);
+        //     return x;
+        // }
+
+        // function sumNum(x){ 
+        //     if(x==0) return x;      
+        //     return x+sumNum(x-1);
+        //     console.log(x);
+        //     return x;
+        // }
+
+        var num1 = sumNum1(prompt('숫자를 입력하세요.')*1);
+        console.log('모두 더한 값은 '+num1);
+
+        // function sumNum1(x){            
+        //     if(x==10) return 10;
+        //     if(x%2==0){
+        //         console.log(x);
+        //         x+=sumNum1(x+1);                
+        //     }else{
+        //         return sumNum1(x);
+        //     }
+        //     return x;
+        // }
+
+        function sumNum1(x){           
+            if(x==10) {console.log(x); return 10;}
+            if(x%2==0){
+                console.log(x);
+                return x+sumNum1(x+1);                
+            }else{
+                return sumNum1(x+1);
+            }
+            return x;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <style>
+            ul.first {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: stretch;
+                border: 10px solid purple;
+                height: 500px;
+            }
+            ul.first > li {
+                display: flex;
+                align-items: center;
+                border: 5px solid skyblue;
+            }
+            ul.first > li:nth-of-type(1){flex: 0 0 1000px;}
+            ul.first > li:nth-of-type(2){flex: 0 0 1000px;}
+            ul.first > li:nth-of-type(3){flex: 0 0 1000px;}
+            ul.first > li:nth-of-type(4){flex: 0 0 1000px;}
+            ul.first > li:nth-of-type(5){flex: 0 0 1000px;}
+            ul.first > li > a {
+                background: orange;
+            }
+
+            /* container */
+            div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                border: 10px solid red;
+            }
+            div>*{border: 5px solid green;}
+
+            /* content */
+            div>p:first-of-type{
+                flex: 0 1 200px; /*grow shrink flex-basis*/
+
+            }
+
+            /* li들의 container */
+            div>ul{
+                flex: 0 1 300px;
+                display: flex;
+
+            }
+
+            /* ul의 content */
+            div>ul>li{
+                flex: 0 1 auto;
+                border: 3px solid blue;
+
+            }
+            div>p:last-of-type{
+                flex: 0 1 200px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="first">
+            <li>
+                <a href="#">AAAAA</a>
+            </li>
+            <li>
+                <a href="#">BBBB</a>
+            </li>
+            <li>
+                <a href="#">CCC</a>
+            </li>
+            <li>
+                <a href="#">DD</a>
+            </li>
+            <li>
+                <a href="#">E</a>
+            </li>
+        </ul>
+        <div>
+            <p>prev</p>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <p>next</p>
+        </div>
+    </body>
+</html>

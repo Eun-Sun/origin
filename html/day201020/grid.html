@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-rows: 150px repeat(2, minmax(500px,auto)) 300px;
+            grid-template-columns: repeat(2,minmax(362px,auto)) 300px;
+            grid-template-areas: 
+                "hd hd hd"
+                "se1 se1 as"
+                "se2 se2 as"
+                "ft ft ft"
+            ;
+            margin: 0 auto;
+            width: 80%;
+            min-width: 1024px;  
+            background: orange;
+            border: 3px solid orange;
+        }
+        header{
+            grid-area: hd;
+            background: powderblue;
+        }
+        section.section1{
+            grid-area: se1;
+            background: rosybrown;
+        }
+        section.section2{
+            grid-area: se2;
+            background: lavender;
+        }
+        aside{
+            grid-area: as;
+            background: lemonchiffon;
+        }
+        footer{
+            grid-area: ft;
+            background: khaki;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header> header </header>
+        <section class="section1"> section1 </section>
+        <section class="section2"> section2 </section>
+        <aside> aside </aside>        
+        <footer> footer </footer>
+    </div>
+    
+</body>
+</html>

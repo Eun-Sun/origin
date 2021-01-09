@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{
+            background: lightseagreen;
+        }
+        #loading1{
+            position: relative;
+            margin: 100px auto;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background-image: linear-gradient(90deg, #fff 20%, transparent 50%);
+            transform: rotate(0deg);
+            animation: loading1 1s linear infinite;
+        }
+        #loading1::before{
+            content: "";
+            position: absolute;
+            left:0;top: 0; 
+            width: 100px; height: 100px;
+            border-radius: 100% 0 0 0;
+            background: #fff;
+        }
+        #loading1::after{
+            content: "";
+            position: absolute;
+            left:20px;top: 20px; 
+            width: 160px; height: 160px;
+            border-radius: 50%;
+            background: lightseagreen;
+        }
+        @keyframes loading1{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+
+        #loading2{
+            position: relative;
+            margin: 50px auto;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+        }
+        #loading2>div{
+            position: absolute;
+            top: 0; left: 0;
+            width: 150px; height: 150px;
+            border-radius: 50%;
+        }
+        #loading2-1::before{
+            content: "";
+            position: absolute;
+            left: calc(50% - 10px); top: 0;
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: lightcoral;
+        }
+        #loading2-2::before{
+            content: "";
+            position: absolute;
+            left: calc(50% - 8px); top: 2px;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: lightsalmon;
+        }
+        #loading2-3::before{
+            content: "";
+            position: absolute;
+            left: calc(50% - 6px); top: 4px;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: lightgoldenrodyellow;
+        }
+        #loading2-4::before{
+            content: "";
+            position: absolute;
+            left: calc(50% - 4px); top: 6px;
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: lightgreen;
+        }
+        #loading2-5::before{
+            content: "";
+            position: absolute;
+            left: calc(50% - 2px); top: 8px;
+            width: 4px; height: 4px;
+            border-radius: 50%;
+            background:lightblue;
+        }
+        #loading2-1{animation: loading2 1s cubic-bezier(0,.62,.43,1) infinite;}
+        #loading2-2{animation: loading2 1s cubic-bezier(0,.52,.53,1) infinite;}
+        #loading2-3{animation: loading2 1s cubic-bezier(0,.42,.63,1) infinite;}
+        #loading2-4{animation: loading2 1s cubic-bezier(0,.32,.73,1) infinite;}
+        #loading2-5{animation: loading2 1s cubic-bezier(0,.22,.83,1) infinite;}
+
+        @keyframes loading2{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="loading1">
+
+    </div>
+
+    <div id="loading2">
+        <div id="loading2-1"></div>
+        <div id="loading2-2"></div>
+        <div id="loading2-3"></div>
+        <div id="loading2-4"></div>
+        <div id="loading2-5"></div>
+    </div>
+</body>
+</html>

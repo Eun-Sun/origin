@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //복합데이터타입 -->데이터타입이기때문에 할당이 가능함.
+        //object, array, function
+        //변수, 함수 삭제 안됨, hoisting되기 때문에! 데이터만 삭제되는것.
+        //데이터로 사용된 함수는 삭제가 가능함
+
+        //test(); //error 아래 function이 선언되지 않은 함수이기때문에 부를 수 없음.
+        //익명함수  --> 이름이 없는 함수
+        (function (n){/*표현식*/ alert(n);})(10);//alert(10);과 동일 //-> 한번만 쓰고 안쓸 함수이기때문에 메모리에 부담을 주지 x
+
+
+        var test = function kkk(){/*표현식*/ alert('나는 익명함수야');}//(직접할당)데이터로 직접 할당된 함수는 삭제가 가능함. function의 경우 이름이 없기때문에 삭제가 되버림. 이름을 줘도 소용없음. 함수로 할당이 되어버렸기때문에.
+        test(); // 함수로 사용가능
+        test = 1; // 함수삭제 line21부터는 test는 함수로 사용할 수 없다.
+
+        function foo(){
+            alert('나는 foo야');
+        }
+
+        test = foo;
+
+        test();
+
+
+        //객체 object
+        //객체는 여러 데이터 타입의 모음.
+        //하나의 의미있는 객체를 완성하기 위한 의미가 있는 속성과 값들의 모임.
+        //만드는 방법은 2가지 타입으로 완성한다.
+        //1. var 식별자 = {속성:값, 속성:값,,,,}
+        //2. var 식별자 = new Object();
+        //       식별자.속성 = 값;
+        //       식별자.속성 = 값; ,,,
+        //속성에 접근할 수 있는 것은 해당객체만 가능하다.
+        //해당객체.속성 ===> 그 속성이 갖고 있는 값을 의미한다.
+        //외부에서는 속성에 바로 접근할 수 없다.
+        //var obj = {x:1}
+        //obj.x --ok
+        //x -- error
+
+        //var bycicle = {'pedal':true, 'handle':true, 'chain':true, 'wheel':true, 'seat':true}
+        //var ansunyoung = {height:170, weight:48, face:'baby', pet:'dog', web:'true',,,}
+
+        var book = {paper:true, cover:true, page:true, text:true}
+        console.log(book.paper);
+
+            
+
+    </script>
+</body>
+</html>

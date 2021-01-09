@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    while(true){
+        var num1 = prompt('값을 입력하세요')*1;
+        if(num1>=0){
+            var opera = prompt('+,-,/,* 중 원하는 연산자를 입력하세요');
+            if(opera == '+' || opera == '-' || opera == '*' || opera == '/' ){
+                var num2 = prompt('값을 입력하세요')*1;
+                if(num2>=0){
+                    var col = calc(num1, opera, num2);
+                    alert(col);
+                    break;
+                }else{
+                    alert('숫자를 입력해주세요.')
+                }                
+            }else{
+                alert('연산자 잘못 입력되었습니다.');
+            }
+        }else{
+            alert('숫자를 입력해 주세요.');
+        }        
+    }
+
+    function calc(x, y ,z){ //x가첫번째 y가 연산자 z가 두번째 숫자
+                if(y=='+'){
+                    col = x+z;
+                    return col;
+                }else if(y=='-'){
+                    col = x-z;
+                    return col;
+                }else if(y=='*'){
+                    col = x*z;
+                    return;
+                }else if(y=='/'){
+                    col = x/z;
+                    return col;
+                }else{
+                    alert('값을 잘못 입력하셨습니다.');
+                }
+
+
+        }
+    </script>
+</body>
+</html>

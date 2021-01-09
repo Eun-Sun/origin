@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //임의의 숫자를 입력했을때 그 숫자의 자리수에 해당하는 숫자만 띄우고, ex>92567이면 제일 처음에 9, 다음에 2, 5, ,,,,, 맨마지막으로 7을 띄운다
+
+        while(true){
+            var n = prompt('임의의 숫자를 입력하시오.')*1;
+            if(!isNaN(n)){//isNaN은 전달인자가 숫자형식이 아닌 number타입을 true로 반환, 즉 숫자형식의 number는 false로 return한다.
+                checkNum(n);
+                break;
+            }
+        }
+
+        // function checkNum(num){
+            
+        //     if(num<10){
+        //         console.log(num);
+        //         return; //return만 줬을땐 함수가 그냥 끝나라는 의미
+        //     }
+        //     checkNum(parseInt(num/10)); //재귀함수가 먼저 실행되야하기떄문에 위에 있어야함.
+        //     console.log(num%10);
+        //     return;
+        // }
+
+        function checkNum(num){
+            checkNum(parseInt(num/10));
+            console.log(num%2);
+            if(num>10){
+                console.log(num);
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

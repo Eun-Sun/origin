@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>제비스코</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/header_web.css">          
+        <link rel="stylesheet" media="only screen and (min-width:961px) and (max-width:1199px)" href="css/header_tablet.css">  
+        <link rel="stylesheet" media="only screen and (max-width:960px)" href="css/header_mobile.css">      
+
+        <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/main_web.css">
+        <link rel="stylesheet" media="only screen and (min-width:641px) and (max-width:1199px)" href="css/main_tablet.css">
+        <link rel="stylesheet" media="only screen and (max-width:640px)" href="css/main_mobile.css">
+
+        <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/footer_web.css">
+        <link rel="stylesheet" media="only screen and (min-width:961px) and (max-width:1199px)" href="css/footer_tablet.css">
+        <link rel="stylesheet" media="only screen and (max-width:960px)" href="css/footer_mobile.css">
+        <style>
+            @font-face {
+                font-family: 'Nanum Godic';
+                src: url("font/NanumGothic.eot");
+                src: local('※'), url("font/NanumGothic.woff") format('woff'), url("font/NanumGothic.ttf") format('truetype');
+            }
+
+            html {
+                font-size: 62.5%;
+                font-family: 'Nanum Godic', sans-serif;
+            }
+            body{
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="header">
+                <p class="mobile btn"><span class="hidden">btn</span></p>
+                <h1>
+                    <a href="#"><img src="imgs/h1_logo_1.gif" alt="제비스코 로고"></a>
+                </h1>
+                <nav>
+                    <p class="mobile link_home"><a href="#"><img src="imgs/gnb_logo_m.png" alt="모바일 로고"><span class="hidden">홈으로</span></a></p>
+                    <p class="mobile close"><a href="#"><span class="hidden">닫기</span></a></p>
+                    <h1 class="hidden">상단 네비게이션</h1>
+                    <ul>
+                        <li>
+                            <a href="#">건축용</a>
+                            <ul>
+                                <li class="blue">
+                                    <a href="#">건축용 HOME</a>
+                                </li>
+                                <li class="is">
+                                    <a href="#">제품소개</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">내벽/외벽</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">목재/철재</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">바닥/방수</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">특수도료/기능성</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">실란트/스프레이 외</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">친환경/KS인증도료</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">DIY</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">공간별추천</a>
+                                </li>
+                                <li class="is">
+                                    <a href="#">컬러정보</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">베스트 컬러 컬렉션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">마스터 컬러 컬렉션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">컬러 검색</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">DIY용 페인팅가이드</a>
+                                </li>
+                                <li class="is">
+                                    <a href="#">전문가용페인팅가이드</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">도장결함솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">페인트소요량계산</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">페인트용어사전</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">도장컨설팅시스템</a>
+                                </li>
+                                <li>
+                                    <a href="#">자동조색시스템</a>
+                                </li>
+                                <li>
+                                    <a href="#">대리점 안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">공업용</a>
+                            <ul>
+                                <li class="blue">
+                                    <a href="#">공업용 HOME</a>
+                                </li>
+                                <li class="is">
+                                    <a href="#">철/비철 금속</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">제품소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산업별솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술지원</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">컬러컨설팅</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">플라스틱</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">제품소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산업별솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술지원</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">분체</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">제품소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산업별솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술지원</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">컬러북</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">목공</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">제품소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산업별솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술지원</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">제관</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">제품소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산업별솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술지원</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">PCM</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">제품소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산업별솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술지원</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">특수코팅</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">제품소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산업별솔루션</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술지원</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">선박·중방식용</a>
+                            <ul>
+                                <li class="blue">
+                                    <a href="#">선박·중방식용 HOME</a>
+                                </li>
+                                <li class="is">
+                                    <a href="#">제품소개</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">선박용</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">중방식용</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">KCS컬러북</a>
+                                </li>
+                                <li>
+                                    <a href="#">산업별솔루션</a>
+                                </li>
+                                <li>
+                                    <a href="#">시공사례</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">자동차보수용</a>
+                            <ul>
+                                <li class="blue">
+                                    <a href="#">자동차보수용 HOME</a>
+                                </li>
+                                <li class="is">
+                                    <a href="#">제품소개</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">추천제품</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">제품제품</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">시스템도장</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Premium</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Standard</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Speed</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">CV</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">도장기술</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">도장결함솔루션</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">컬러정보</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">JEVISCO Refimish 시스템</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">컬러 검색</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">컬러 온라인</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">이달의컬러</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육센터</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">기업정보</a>
+                            <ul>
+                                <li class="is">
+                                    <a href="#">회사소개</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">회사개요</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">CEO인사말</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">연혁</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">브랜드소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">국내외사업장</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">강남그룹소개</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">그룹개요</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">경영이념</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">역사관</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">계열사소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">사회공헌</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">미디어센터</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">뉴스</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">홍보자료실</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">투자정보</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">재무정보</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이사회 및 감사현황</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">전자공고공시사항</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">공시정보관리규정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">결산공고</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">주가정보</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">인재채용</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">인사/복지 제도</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채용절차</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">채용공고</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">합격자결과조회</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="is">
+                                    <a href="#">고객지원</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Contact Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">대리점안내</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">FAQ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1:1문의</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">기술자료검색</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">인증서/성적서/시방서</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>                
+                </nav>
+                <div class="mobile tablet curtain"><span class="hidden">모바일 배경</span></div>    
+                <div class="utill">
+                    <div class="search">
+                        <a href="#">제품검색</a>
+                        <form action="jevisco.jsp">
+                            <fieldset>
+                                <label for="srch" class="hidden">제품검색</label>
+                                <input type="search" id="srch" name="srch" placeholder="   | 제품명을 입력하세요.">
+                                <input type="image" src="imgs/ic_search.png" alt="찾기">
+                                <input type="image" src="imgs/ic_close_search.png" alt="찾기">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="mobile curtain"><span class="hidden">모바일 배경</span></div>
+                    <div class="lang">
+                        <dl>
+                            <dt class="hidden">언어선택</dt>
+                            <dd>
+                                <a href="#">KOR</a>
+                            </dd>
+                            <dd>
+                                <a href="#">ENG</a>
+                            </dd>
+                            <dd>
+                                <a href="#">中國語</a>
+                            </dd>
+                        </dl>
+                    </div>    
+                </div>
+            </div>
+        </header>
+        <main id="top">
+            <div>
+                <video
+                    controls="controls"
+                    autoplay="autoplay"
+                    loop="loop"
+                    muteds="muteds"
+                    preload="preload">
+                    <source src="media/jevisco_main.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!--ul>li*4>img*3-->
+            <div class="img">
+                <dl>
+                    <dt class="hidden">도료종류</dt>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr01.jpg" alt="건축용 도료"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr01_over.jpg" alt="건축용 도료"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/product_object01.png" alt="컬러로 느껴지다"></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="hidden">도료종류</dt>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr02.jpg" alt="공업용도료"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr02_over.jpg" alt="컬러로 만나다"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/product_object02.png" alt="공업용 도료"></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="hidden">도료종류</dt>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr03.jpg" alt="선박중방식용 도료"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr03_over.jpg" alt="선박중방식용 도료"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/product_object03.png" alt="컬러로 보호하다"></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="hidden">도료종류</dt>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr04.jpg" alt="자동차보수용도료"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/bg_main_pr04_over.jpg" alt="선박중방식용 도료"></a>
+                    </dd>
+                    <dd>
+                        <a href="#"><img src="imgs/product_object04.png" alt="컬러로 완성하다"></a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="new">
+                <section>
+                    <h1 class="hidden">기업정보</h1>
+                    <h1>뉴스</h1>
+                    <div class="news">
+                        <article class="first">
+                            <p>보도자료</p>
+                            <p>
+                                <a href="#">강남제비스코㈜, '슈퍼아쿠아 인캔 조색기’ 출시</a>
+                            </p>
+                            <p>
+                                <time pubdate="2020-09-03">2020.09.03</time>
+                            </p>
+                            <p>강남제비스코㈜, '슈퍼아쿠아 인캔 조색기’ 출시▶온라인 배합 시스템과 연동해 손쉽게 조색 가능강남제비스코㈜가 수용성 자동차 보수용 도료의
+                                조색 기기인 '슈퍼아쿠아 인캔 조색기’를 출시했다. '슈퍼아쿠아 인캔 조색기’는...
+                            </p>
+                        </article>
+                        <div class="sub_news">
+                            <div class="m_sub_news">
+                                <div class="no_1">
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 실외 수영장용 페인트 2종 출시</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-06-25">2020.06.25</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 창원시와 함께 스타트업 성장지원과 상생을 위한 업무협약 체결</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-08-04">2020.08.04</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 목재, 철재용 친환경 페인트 출시</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-07-13">2020.07.13</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남그룹, 동작구립장애인보호작업장에 '쿨루프 옥상 차열방수’ 지원 캠페인 시행</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-08-14">2020.08.14</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                </div>
+                                <!--2페이지-->
+                                <div class="no_2">
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 고기능성 내화도료 개발</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-03-23">2020.03.23</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 저독성 워시프라이머 개발</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2019-12-20">2019.12.20</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, MOCA Free 방수페인트 ‘우방코트S 에코 중도’ 출시</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2019-11-20">2019.11.20</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt class="comp">회사뉴스</dt>
+                                            <dd>
+                                                <a href="#">2020년 '제비스코 DAY' 캠페인 실시</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-07-07">2020.07.07</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                </div>
+                                <!--3페이지-->
+                                <div class="no_3">
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 친환경 바닥용 페인트 출시</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-04-20">2020.04.20</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 장애인정보화사업소에 PC 기증</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2020-06-02">2020.06.02</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt>보도자료</dt>
+                                            <dd>
+                                                <a href="#">강남그룹, 푸드뱅크에 행복나눔 학용품 기증</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2019-09-26">2019.09.26</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                    <article class="move">
+                                        <dl>
+                                            <dt class="comp">회사뉴스</dt>
+                                            <dd>
+                                                <a href="#">강남제비스코㈜, 라디오 광고 실시</a>
+                                            </dd>
+                                            <dd>
+                                                <time pubdate="2019-04-10">2019.04.10</time>
+                                            </dd>
+                                        </dl>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--뉴스페이징-->
+                    <div>
+                        <a href="#"></a>
+                        <ul>
+                            <li>
+                                <a href="#"><img src="imgs/mainnews_indicator.png" alt="첫페이지"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="imgs/mainnews_indicator.png" alt="두번째페이지"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="imgs/mainnews_indicator_on.png" alt="세번째페이지"></a>
+                            </li>
+                        </ul>
+                        <a href="#"></a>
+                    </div>
+                </section>
+                <div class="intro">
+                    <section class="margin">
+                        <h1>
+                            <a href="#">회사소개</a>
+                        </h1>
+                        <p>
+                            <a href="#">혁신적인 도료산업의 리더. 강남제비스코를 소개합니다.</a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_main_company_m.jpg" alt="회사소개"></a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_menu_more02.png" alt="더보기"></a>
+                        </p>
+                    </section>
+                    <section class="margin_r">
+                        <h1>
+                            <a href="#">브랜드소개</a>
+                        </h1>
+                        <p>
+                            <a href="#">JEVISCO, 제비표페인트의 새로운 이름을 만나 보세요.</a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_main_brandstory_m.jpg" alt="브랜드소개"></a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_menu_more02.png" alt="더보기"></a>
+                        </p>
+                    </section>
+                    <section class="margin">
+                        <h1>
+                            <a href="#">인재채용</a>
+                        </h1>
+                        <p>
+                            <a href="#">강남제비스코와 함께 성장할 인재를 찾습니다.</a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_main_recruit_m.jpg" alt="회사소개"></a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_menu_more02.png" alt="더보기"></a>
+                        </p>
+                    </section>
+                    <section class="margin_r">
+                        <h1>
+                            <a href="#">강남그룹 역사관</a>
+                        </h1>
+                        <p>
+                            <a href="#">강남그룹의 70여년 역사의 발자취를 소개합니다.</a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_main_history_m.jpg" alt="회사소개"></a>
+                        </p>
+                        <p>
+                            <a href="#"><img src="imgs/img_menu_more02.png" alt="더보기"></a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <!--추가 검색-->
+            <div class="search">
+                <ul>
+                    <li>
+                        <a href="#">기술자료 검색</a>
+                    </li>
+                    <li>
+                        <a href="#">대리점 안내</a>
+                    </li>
+                    <li>
+                        <a href="#">1:1 문의</a>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                <a href="#top">TOP</a>
+            </p>
+        </main>
+
+        <footer>
+            <div>
+                <h1 class="hidden">하단메뉴</h1>
+                <div>
+                    <ul>
+                        <li class="hidden">유틸메뉴</li>
+                        <li>
+                            <a href="#">개인정보취급방침</a>
+                        </li>
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">사이트맵</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="imgs/ic_facebook.png" alt="페이스북"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="imgs/ic_instagram.png" alt="인스타그램"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="imgs/ic_ytb.png" alt="유튜브"></a>
+                        </li>
+                    </ul>
+                    <dl class="web tablet">
+                        <dt>
+                            <a href="#">Family site</a>
+                        </dt>
+                        <dd>
+                            <a href="#">강남화성</a>
+                        </dd>
+                        <dd>
+                            <a href="#">㈜강남</a>
+                        </dd>
+                        <dd>
+                            <a href="#">KNK코팅스</a>
+                        </dd>
+                        <dd>
+                            <a href="#">강남KPI</a>
+                        </dd>
+                        <dd>
+                            <a href="#">문화연필</a>
+                        </dd>
+                        <dd>
+                            <a href="#">강남건영</a>
+                        </dd>
+                        <dd>
+                            <a href="#">강남아이텍</a>
+                        </dd>
+                    </dl>
+                    <select class="mobile" name="Family site" id="site">
+                        <option value="Family site" selected>Family site</option>
+                        <option value="강남화성">강남화성</option>
+                        <option value="㈜강남">㈜강남</option>
+                        <option value="KNK코팅스">KNK코팅스</option>
+                        <option value="강남KPI">강남KPI</option>
+                        <option value="문화연필">문화연필</option>
+                        <option value="강남아이텍">강남아이텍</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p><img src="imgs/bg_foot_logo.png" alt="제비스코 로고"></p>
+                    <address>
+                        <p>[06733] 서울시 서초구 서운로1길12 강남빌딩 강남제비스코㈜</p>
+                        <dl>
+                            <dt class="hidden">연락처</dt>
+                            <dd>전국 대표번호 1588-7233&nbsp|</dd>
+                            <dd>&nbsp소비자 상담실 080-727-7777</dd>
+                        </dl>
+                        <p>Copyrightⓒ KANGNAM JEVISCO CO., LTD.</p>
+                    </address>
+                </div>    
+            </div>
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //4칙연산 함수
+        //계산기
+        //1. 임의의 숫자 2개를 따로 입력하고
+        //2. 연산자를 따로 입력하면
+        //3. 그 결과값을 alert을 이용해서 띄우는 함수를 작성하시오.
+        // 선생님 풀이
+        while(true){
+            var value = calc(prompt('숫자를 입력하시오'), prompt('연산자를 입력하시오'), prompt('숫자를 입력하시오'));
+            if(value){ break; } //false가 아니면 멈춤
+            alert('숫자나 연산자를 정확히 입력하세요');
+        }
+        alert(value)
+
+        function calc(x, y, z){
+            x *=1;
+            z *=1;
+            if(isNaN(x)){return false}; //NaN이면 true;
+            if(isNaN(z)){return false}; //NaN이면 true;
+            var result;
+            if(y == '+'){
+                result = x +"+"+z+"="+(x+z);
+            }else if(y == 'x'){
+                result = x +"x"+z+"="+(x*z);
+            }else if(y == '-'){
+                result = x +"-"+z+"="+(x-z);                
+            }else if(y == '/'){
+                result = x +"/"+z+"="+(x/z);
+            }else{
+                return false;
+            }
+            return result;
+        }
+
+
+
+
+        /* 내 풀이
+        while(true){
+        var num1 = prompt('값을 입력하세요')*1;
+        if(num1>=0){
+            var opera = prompt('+,-,/,* 중 원하는 연산자를 입력하세요');
+            if(orera == '+' && opera == '-' && opera == '*' && opera == '/' ){
+                var num2 = prompt('값을 입력하세요')*1;
+                if(num2>=0){
+                    var col = calc(num1, opera, num2);
+                    alert(col);
+                }else{
+                    alert('숫자를 입력해주세요.')
+                }
+                
+            }else{
+                alert('연산자 잘못 입력되었습니다.');
+            }
+        }else{
+            alert('숫자를 입력해 주세요.');
+        }        
+        }
+
+
+
+
+        function calc(x, y ,z){ //x가첫번째 y가 연산자 z가 두번째 숫자
+                if(y=='+'){
+                    col = x+z;
+                    return col;
+                }else if(y=='-'){
+                    col = x-z;
+                    return col;
+                }else if(y=='*'){
+                    col = x*z;
+                    return;
+                }else if(y=='/'){
+                    col = x/z;
+                    return col;
+                }else{
+                    alert('값을 잘못 입력하셨습니다.');
+                }
+            // }else{
+            //     alert('값을 잘못 입력하셨습니다.');
+            //     var bool = confirm('다시입력하시겠습니까?');
+            //     if(bool){
+            //         return clac(x, y , z);
+
+            //     }else{
+            //         alert('종료하겠습니다.');
+            //         return 'Bye';
+            //     }
+
+            // }
+
+        }
+        */
+
+        
+
+    </script>
+</body>
+</html>

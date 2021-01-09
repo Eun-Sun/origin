@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1번.
+    /*
+    while(true){
+    var num = cross(prompt('숫자를 입력하세요.'));
+    if(num){break;}
+    alert('숫자만 입력가능합니다.');
+    }
+    alert(num);
+    function cross(x){
+        var result = 0;
+        if(isNaN(x)) return false;
+        if(x%2==0){
+            result = x*3;
+        }else if(x%5==0){
+            result = x*5;
+        }else{
+            result='땡';
+        }
+        return result;
+    }
+    */
+
+    //2번. 홀수의 구구단만 출력하시오.
+    /*
+    var dan = gugu();
+
+    function gugu(){
+        var num1 = 0;
+        var num2 = 0;
+        while(true){
+            num1++;
+            while(true){
+                    num2++;
+                    if(num1%2==1){
+                    console.log(num1+'x'+num2+'='+(num1*num2));
+                    }
+                    if(num2==9){
+                    num2=0; break;
+                    }
+            }
+            if(num1==9) break;
+        }
+    }
+    */
+
+    //3번. 주사위를 두번 굴려 나온값을 차례대로 입력하고, 큰 숫자에서 작은 숫자를 빼시오.
+    /*
+    while(true){
+    var num = cube(prompt('주사위 값을 입력하세요.'),prompt('주사위 값을 입력하세요'));
+    if(num) break;
+    alert('숫자만 입력할 수 있습니다.');
+    }
+    alert(num);
+
+    function cube(x,y){
+        x*=1;
+        y*=1;
+        if(isNaN(x)){return false};
+        if(isNaN(y)){return false};
+        var result;
+
+        if(x>=1 && x<=6 && y>=1 &&y<=6){
+            if(x>y){
+                result=x+'-'+y+'='+(x-y);
+            }else if(x<y){
+                result=y+'-'+x+'='+(y-x);
+            }else if(x==y){
+                result='탈락';
+            }else{
+                return false;
+            }
+            return result;
+        }
+    }
+    */
+
+
+    //4번. 임의의 숫자 3개를 입력하고 더하기, 곱하기 중 하나를 입력하여 결과값을 도출, alert로 도출.
+    /*
+    while(true){
+    var num = count(prompt('숫자를 입력하시오.'), prompt('+,x 중 원하는 값을 입력하시오.'), prompt('숫자를 입력하시오.'), prompt('+,x 중 원하는 값을 입력하시오.'), prompt('숫자를 입력하시오.'));
+    if(num){break;}
+    alert('값을 다시 입력해주세요.')
+    }
+
+    alert(num);
+
+    function count(a, b, c, d, e){
+        a*=1;
+        c*=1;
+        e*=1;
+        if(isNaN(a)){return false};
+        if(isNaN(c)){return false};
+        if(isNaN(e)){return false};
+        var result;
+        if(b=='+' && d=='+'){            
+            result=a+'+'+c+'+'+e+'='+(a+c+e);
+        }else if(b=='x' && d=='x'){
+            result=a+'x'+c+'x'+e+'='+(a*c*e);
+        }else if(b=='+' && d=='x'){
+            result=a+'+'+c+'x'+e+'='+(a+c*e);
+        }else if(b=='x' && d=='+'){
+            result=a+'x'+c+'+'+e+'='+(a*c+e);
+        }else{
+            return false;
+        }
+        return result;
+    }
+    */
+    </script>
+</body>
+</html>
